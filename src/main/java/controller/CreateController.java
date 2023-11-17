@@ -40,7 +40,7 @@ public class CreateController implements ActionListener {
     //Boton para las intrucciones del evento del boton "Crear".
     @Override
     public void actionPerformed(ActionEvent e ) {
-     
+         
         if(e.getSource() == vistaPrincipal.botonAgregar){
             //Cerrar la ventana principal el programa y abrir la ventana para crear un usuario
             vistaPrincipal.dispose();
@@ -60,8 +60,17 @@ public class CreateController implements ActionListener {
             createModel.setNacimiento(vistaCrear.campoNacimiento.getText());
             createModel.almacenarUsuarios();
             //createModel.setNombre(vistaCrear.tipoUsuarioComboBox.getText());
-        
+            
+                    
         }
+        if(e.getSource() == vistaCrear.botonVolver){
+            JOptionPane.showMessageDialog(null,"Se presiono boton volver");
+            //vistaCrear.dispose();
+            //vistaPrincipal.setVisible(true);
+            
+            }
+
+       
         
     }
     
