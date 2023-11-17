@@ -35,6 +35,7 @@ public class Create{
     private int celular;
     private String direccion;
     private int id;
+    Set<Create> usuarios = new HashSet<>();
 
    /* public Create(String nombre, String apellido, String nacimiento, int celular, String direccion, int id, PrincipalView vistaPrincipal) {
         super(vistaPrincipal);
@@ -95,8 +96,6 @@ public class Create{
     }
     
     public void almacenarUsuarios(){
-    
-        Set<Create> usuarios = new HashSet<>();
         usuarios.add(this);
         JOptionPane.showMessageDialog(null, usuarios);
     }
