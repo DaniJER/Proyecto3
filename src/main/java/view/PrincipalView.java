@@ -29,10 +29,10 @@ public class PrincipalView extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        listarButton = new javax.swing.JButton();
-        Agregar = new javax.swing.JButton();
-        actualizar = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        botonListar = new javax.swing.JButton();
+        botonAgregar = new javax.swing.JButton();
+        botonActualizar = new javax.swing.JButton();
+        botonEliminar = new javax.swing.JButton();
         jTextField3 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -62,69 +62,69 @@ public class PrincipalView extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(31, 30, 190, 270);
 
-        listarButton.setBackground(new java.awt.Color(131, 131, 131));
-        listarButton.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
-        listarButton.setForeground(new java.awt.Color(0, 0, 0));
-        listarButton.setText("Listar");
-        listarButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 0), java.awt.Color.black));
-        listarButton.setMaximumSize(new java.awt.Dimension(170, 75));
-        listarButton.setMinimumSize(new java.awt.Dimension(170, 75));
-        listarButton.setPreferredSize(new java.awt.Dimension(170, 75));
-        listarButton.addActionListener(new java.awt.event.ActionListener() {
+        botonListar.setBackground(new java.awt.Color(131, 131, 131));
+        botonListar.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        botonListar.setForeground(new java.awt.Color(0, 0, 0));
+        botonListar.setText("Listar");
+        botonListar.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        botonListar.setMaximumSize(new java.awt.Dimension(170, 75));
+        botonListar.setMinimumSize(new java.awt.Dimension(170, 75));
+        botonListar.setPreferredSize(new java.awt.Dimension(170, 75));
+        botonListar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                listarButtonActionPerformed(evt);
+                botonListarActionPerformed(evt);
             }
         });
-        jPanel1.add(listarButton);
-        listarButton.setBounds(480, 340, 170, 75);
+        jPanel1.add(botonListar);
+        botonListar.setBounds(490, 400, 170, 75);
 
-        Agregar.setBackground(new java.awt.Color(131, 131, 131));
-        Agregar.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
-        Agregar.setForeground(new java.awt.Color(0, 0, 0));
-        Agregar.setText("Agregar");
-        Agregar.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
-        Agregar.setMaximumSize(new java.awt.Dimension(170, 75));
-        Agregar.setMinimumSize(new java.awt.Dimension(170, 75));
-        Agregar.setPreferredSize(new java.awt.Dimension(170, 75));
-        Agregar.addActionListener(new java.awt.event.ActionListener() {
+        botonAgregar.setBackground(new java.awt.Color(131, 131, 131));
+        botonAgregar.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        botonAgregar.setForeground(new java.awt.Color(0, 0, 0));
+        botonAgregar.setText("Agregar");
+        botonAgregar.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        botonAgregar.setMaximumSize(new java.awt.Dimension(170, 75));
+        botonAgregar.setMinimumSize(new java.awt.Dimension(170, 75));
+        botonAgregar.setPreferredSize(new java.awt.Dimension(170, 75));
+        botonAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AgregarActionPerformed(evt);
+                botonAgregarActionPerformed(evt);
             }
         });
-        jPanel1.add(Agregar);
-        Agregar.setBounds(270, 230, 170, 75);
+        jPanel1.add(botonAgregar);
+        botonAgregar.setBounds(270, 270, 170, 75);
 
-        actualizar.setBackground(new java.awt.Color(131, 131, 131));
-        actualizar.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
-        actualizar.setForeground(new java.awt.Color(0, 0, 0));
-        actualizar.setText("Actualizar");
-        actualizar.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
-        actualizar.setMaximumSize(new java.awt.Dimension(170, 75));
-        actualizar.setMinimumSize(new java.awt.Dimension(170, 75));
-        actualizar.setPreferredSize(new java.awt.Dimension(170, 75));
-        actualizar.addActionListener(new java.awt.event.ActionListener() {
+        botonActualizar.setBackground(new java.awt.Color(131, 131, 131));
+        botonActualizar.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        botonActualizar.setForeground(new java.awt.Color(0, 0, 0));
+        botonActualizar.setText("Actualizar");
+        botonActualizar.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        botonActualizar.setMaximumSize(new java.awt.Dimension(170, 75));
+        botonActualizar.setMinimumSize(new java.awt.Dimension(170, 75));
+        botonActualizar.setPreferredSize(new java.awt.Dimension(170, 75));
+        botonActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                actualizarActionPerformed(evt);
+                botonActualizarActionPerformed(evt);
             }
         });
-        jPanel1.add(actualizar);
-        actualizar.setBounds(480, 230, 170, 75);
+        jPanel1.add(botonActualizar);
+        botonActualizar.setBounds(490, 270, 170, 75);
 
-        jButton4.setBackground(new java.awt.Color(131, 131, 131));
-        jButton4.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(0, 0, 0));
-        jButton4.setText("Eliminar");
-        jButton4.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
-        jButton4.setMaximumSize(new java.awt.Dimension(170, 75));
-        jButton4.setMinimumSize(new java.awt.Dimension(170, 75));
-        jButton4.setPreferredSize(new java.awt.Dimension(170, 75));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        botonEliminar.setBackground(new java.awt.Color(131, 131, 131));
+        botonEliminar.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        botonEliminar.setForeground(new java.awt.Color(0, 0, 0));
+        botonEliminar.setText("Eliminar");
+        botonEliminar.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
+        botonEliminar.setMaximumSize(new java.awt.Dimension(170, 75));
+        botonEliminar.setMinimumSize(new java.awt.Dimension(170, 75));
+        botonEliminar.setPreferredSize(new java.awt.Dimension(170, 75));
+        botonEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                botonEliminarActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4);
-        jButton4.setBounds(270, 340, 170, 75);
+        jPanel1.add(botonEliminar);
+        botonEliminar.setBounds(270, 400, 170, 75);
 
         jTextField3.setBackground(new java.awt.Color(196, 196, 196));
         jTextField3.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
@@ -143,7 +143,7 @@ public class PrincipalView extends javax.swing.JFrame {
         jLabel3.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel3.setPreferredSize(new java.awt.Dimension(195, 90));
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(370, 120, 195, 82);
+        jLabel3.setBounds(370, 140, 195, 82);
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 40)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
@@ -153,7 +153,7 @@ public class PrincipalView extends javax.swing.JFrame {
         jLabel4.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel4.setPreferredSize(new java.awt.Dimension(435, 90));
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(260, 30, 435, 90);
+        jLabel4.setBounds(260, 40, 435, 90);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -169,21 +169,21 @@ public class PrincipalView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void listarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listarButtonActionPerformed
+    private void botonListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonListarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_listarButtonActionPerformed
+    }//GEN-LAST:event_botonListarActionPerformed
 
-    private void AgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarActionPerformed
+    private void botonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_AgregarActionPerformed
+    }//GEN-LAST:event_botonAgregarActionPerformed
 
-    private void actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizarActionPerformed
+    private void botonActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActualizarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_actualizarActionPerformed
+    }//GEN-LAST:event_botonActualizarActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void botonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_botonEliminarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -221,15 +221,15 @@ public class PrincipalView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton Agregar;
-    public javax.swing.JButton actualizar;
-    public javax.swing.JButton jButton4;
+    public javax.swing.JButton botonActualizar;
+    public javax.swing.JButton botonAgregar;
+    public javax.swing.JButton botonEliminar;
+    public javax.swing.JButton botonListar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField3;
-    public javax.swing.JButton listarButton;
     // End of variables declaration//GEN-END:variables
 }

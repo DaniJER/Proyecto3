@@ -17,7 +17,7 @@ public class PrincipalController implements ActionListener {
 
     public PrincipalController(PrincipalView vistaPrincipal) {
         this.vistaPrincipal = vistaPrincipal;
-        this.vistaPrincipal.listarButton.addActionListener(this);
+        this.vistaPrincipal.botonListar.addActionListener(this);
     }
     
     public void iniciarVista(){

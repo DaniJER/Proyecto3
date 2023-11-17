@@ -25,7 +25,7 @@ public class CreateController implements ActionListener {
         this.createModel = createModel;
         this.vistaCrear = vistaCrear;
         //llamar el boton de la vista y añadirle el metodo ActionListener
-        vistaPrincipal.Agregar.addActionListener(this); 
+        vistaPrincipal.botonAgregar.addActionListener(this); 
         //vistaCrear.botonEnviar.addActionListener(this);
         }
     //Metodo que inicia la vista y establece los titulos y las dimensiones de las ventanas
