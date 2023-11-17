@@ -28,6 +28,7 @@ public class CreateController implements ActionListener {
         //llamar el boton de la vista y añadirle el metodo ActionListener
         vistaPrincipal.botonAgregar.addActionListener(this); 
         vistaCrear.botonEnviar.addActionListener(this);
+        vistaCrear.botonVolver.addActionListener(this);
         }
     //Metodo que inicia la vista y establece los titulos y las dimensiones de las ventanas
     public void iniciarPrograma(){
@@ -64,9 +65,9 @@ public class CreateController implements ActionListener {
                     
         }
         if(e.getSource() == vistaCrear.botonVolver){
-            JOptionPane.showMessageDialog(null,"Se presiono boton volver");
-            //vistaCrear.dispose();
-            //vistaPrincipal.setVisible(true);
+            //JOptionPane.showMessageDialog(null,"Se presiono boton volver");
+            vistaCrear.dispose();
+            vistaPrincipal.setVisible(true);
             
             }
 
