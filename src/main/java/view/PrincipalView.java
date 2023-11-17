@@ -29,13 +29,13 @@ public class PrincipalView extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
         listarButton = new javax.swing.JButton();
         Agregar = new javax.swing.JButton();
         actualizar = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jTextField3 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,6 +44,7 @@ public class PrincipalView extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(950, 600));
         jPanel1.setLayout(null);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/LogoUnivalle.jpeg"))); // NOI18N
         jLabel1.setText("jLabel1");
         jLabel1.setMaximumSize(new java.awt.Dimension(190, 270));
         jLabel1.setMinimumSize(new java.awt.Dimension(190, 270));
@@ -52,6 +53,7 @@ public class PrincipalView extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(720, 30, 190, 270);
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/LogoUnivalle.jpeg"))); // NOI18N
         jLabel2.setText("jLabel1");
         jLabel2.setMaximumSize(new java.awt.Dimension(190, 270));
         jLabel2.setMinimumSize(new java.awt.Dimension(190, 270));
@@ -60,34 +62,9 @@ public class PrincipalView extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(31, 30, 190, 270);
 
-        jTextField1.setBackground(new java.awt.Color(195, 195, 195));
-        jTextField1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setText("Bienvenido");
-        jTextField1.setBorder(null);
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(260, 130, 420, 70);
-
-        jTextField2.setBackground(new java.awt.Color(195, 195, 195));
-        jTextField2.setFont(new java.awt.Font("Arial", 1, 40)); // NOI18N
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField2.setText("Universidad del valle");
-        jTextField2.setBorder(null);
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField2);
-        jTextField2.setBounds(260, 30, 420, 70);
-
         listarButton.setBackground(new java.awt.Color(131, 131, 131));
         listarButton.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        listarButton.setForeground(new java.awt.Color(0, 0, 0));
         listarButton.setText("Listar");
         listarButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 0), java.awt.Color.black));
         listarButton.setMaximumSize(new java.awt.Dimension(170, 75));
@@ -103,6 +80,7 @@ public class PrincipalView extends javax.swing.JFrame {
 
         Agregar.setBackground(new java.awt.Color(131, 131, 131));
         Agregar.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        Agregar.setForeground(new java.awt.Color(0, 0, 0));
         Agregar.setText("Agregar");
         Agregar.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
         Agregar.setMaximumSize(new java.awt.Dimension(170, 75));
@@ -118,6 +96,7 @@ public class PrincipalView extends javax.swing.JFrame {
 
         actualizar.setBackground(new java.awt.Color(131, 131, 131));
         actualizar.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        actualizar.setForeground(new java.awt.Color(0, 0, 0));
         actualizar.setText("Actualizar");
         actualizar.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
         actualizar.setMaximumSize(new java.awt.Dimension(170, 75));
@@ -133,6 +112,7 @@ public class PrincipalView extends javax.swing.JFrame {
 
         jButton4.setBackground(new java.awt.Color(131, 131, 131));
         jButton4.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(0, 0, 0));
         jButton4.setText("Eliminar");
         jButton4.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
         jButton4.setMaximumSize(new java.awt.Dimension(170, 75));
@@ -148,11 +128,32 @@ public class PrincipalView extends javax.swing.JFrame {
 
         jTextField3.setBackground(new java.awt.Color(196, 196, 196));
         jTextField3.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTextField3.setForeground(new java.awt.Color(0, 0, 0));
         jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField3.setText("Developed by jviedman dev - enriquez dev");
         jTextField3.setBorder(null);
         jPanel1.add(jTextField3);
         jTextField3.setBounds(211, 540, 520, 19);
+
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Bienvenido");
+        jLabel3.setMaximumSize(new java.awt.Dimension(0, 0));
+        jLabel3.setMinimumSize(new java.awt.Dimension(0, 0));
+        jLabel3.setPreferredSize(new java.awt.Dimension(195, 90));
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(370, 120, 195, 82);
+
+        jLabel4.setFont(new java.awt.Font("Arial", 1, 40)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Universidad del Valle");
+        jLabel4.setMaximumSize(new java.awt.Dimension(0, 0));
+        jLabel4.setMinimumSize(new java.awt.Dimension(0, 0));
+        jLabel4.setPreferredSize(new java.awt.Dimension(435, 90));
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(260, 30, 435, 90);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -167,14 +168,6 @@ public class PrincipalView extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void listarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listarButtonActionPerformed
         // TODO add your handling code here:
@@ -233,9 +226,9 @@ public class PrincipalView extends javax.swing.JFrame {
     public javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     public javax.swing.JButton listarButton;
     // End of variables declaration//GEN-END:variables
