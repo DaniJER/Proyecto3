@@ -13,13 +13,13 @@ public class EditController implements ActionListener {
     private EditView vistaEditar;
     
     //Metodo contructor
-    public EditController(PrincipalView vistaPrincipal, Edit editModel, EditView vistaCrear) {
+    public EditController(PrincipalView vistaPrincipal, Edit editModel, EditView vistaEditar) {
 
         this.vistaPrincipal = vistaPrincipal;
         this.editModel = editModel;
-        this.vistaEditar = vistaEditar
+        this.vistaEditar = vistaEditar;
         //llamar el boton de la vista y añadirle el metodo ActionListener
-        vistaPrincipal.botonEditar.addActionListener(this);
+        vistaPrincipal.botonActualizar.addActionListener(this);
         vistaEditar.botonActualizar.addActionListener(this); 
         vistaEditar.botonVolver.addActionListener(this);
         }
@@ -33,7 +33,7 @@ public class EditController implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e ) {
          
-        if(e.getSource() == vistaPrincipal.botonEditar){
+        if(e.getSource() == vistaPrincipal.botonActualizar){
             //Cerrar la ventana principal el programa y abrir la ventana para crear un usuario
             vistaPrincipal.dispose();
             vistaEditar.setVisible(true);
@@ -41,16 +41,15 @@ public class EditController implements ActionListener {
             vistaEditar.setLocationRelativeTo(null);
         }
         if(e.getSource() == vistaEditar.botonActualizar){
-            
             //Establecerle los valores a los campos de la vista crear.
-            JOptionPane.showMessageDialog(null,"Boton Presionado");
-            createModel.setNombre(vistaCrear.campoNombre.getText());
-            createModel.setApellido(vistaCrear.campoApellido.getText());
-            createModel.setDireccion(vistaCrear.campoApellido.getText());
-            createModel.setCelular(Integer.parseInt(vistaCrear.campoApellido.getText()));
-            createModel.setId(Integer.parseInt(vistaCrear.campoId.getText()));
-            createModel.setNacimiento(vistaCrear.campoNacimiento.getText());
-            createModel.almacenarUsuarios();
+            JOptionPane.showMessageDialog(null,"Boton actualizar Presionado");
+            //createModel.setNombre(vistaCrear.campoNombre.getText());
+            //createModel.setApellido(vistaCrear.campoApellido.getText());
+            //createModel.setDireccion(vistaCrear.campoApellido.getText());
+            //createModel.setCelular(Integer.parseInt(vistaCrear.campoApellido.getText()));
+            //createModel.setId(Integer.parseInt(vistaCrear.campoId.getText()));
+            //createModel.setNacimiento(vistaCrear.campoNacimiento.getText());
+            //createModel.almacenarUsuarios();
             //createModel.setNombre(vistaCrear.tipoUsuarioComboBox.getText());
             
                     
@@ -59,6 +58,6 @@ public class EditController implements ActionListener {
             //JOptionPane.showMessageDialog(null,"Se presiono boton volver");
             vistaEditar.dispose();
             vistaPrincipal.setVisible(true);
-            
             }
+    }
 }
