@@ -25,7 +25,7 @@ public class DefaultUser {
     public String getPnombre() {
         return Pnombre;
     }
-
+    
     public void setPnombre(String Pnombre) {
         this.Pnombre = Pnombre;
     }

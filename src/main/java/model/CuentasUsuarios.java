@@ -8,9 +8,7 @@ import java.util.Set;
 /**
  *
  * @author El Rey
- */
-
-      
+ */ 
 //Aqui se debe importar la vista
 /**
  *
