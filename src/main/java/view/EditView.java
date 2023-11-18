@@ -6,14 +6,14 @@ package view;
 
 /**
  *
- * @author El Rey
+ * @author Daniel Enriquez
  */
-public class CreateView extends javax.swing.JFrame {
+public class EditView extends javax.swing.JFrame {
 
     /**
-     * Creates new form Create
+     * Creates new form EditView
      */
-    public CreateView() {
+    public EditView() {
         initComponents();
     }
 
@@ -30,7 +30,7 @@ public class CreateView extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         campoTipoTelefono = new javax.swing.JComboBox<>();
         jTextField17 = new javax.swing.JTextField();
-        botonEnviar = new javax.swing.JButton();
+        botonActualizar = new javax.swing.JButton();
         campoApellido = new javax.swing.JTextField();
         campoId = new javax.swing.JTextField();
         campoNombre = new javax.swing.JTextField();
@@ -55,13 +55,18 @@ public class CreateView extends javax.swing.JFrame {
 
         jTextField1.setBackground(new java.awt.Color(196, 196, 196));
         jTextField1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jTextField1.setText("Digite los siguientes datos");
+        jTextField1.setText("Editar Usuario");
         jTextField1.setBorder(null);
         jTextField1.setMaximumSize(new java.awt.Dimension(0, 0));
         jTextField1.setMinimumSize(new java.awt.Dimension(0, 0));
         jTextField1.setPreferredSize(new java.awt.Dimension(0, 0));
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(260, 50, 470, 100);
+        jTextField1.setBounds(330, 50, 280, 100);
 
         campoTipoTelefono.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         campoTipoTelefono.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fijo", "movil" }));
@@ -85,17 +90,17 @@ public class CreateView extends javax.swing.JFrame {
         jPanel1.add(jTextField17);
         jTextField17.setBounds(211, 540, 520, 19);
 
-        botonEnviar.setBackground(new java.awt.Color(131, 131, 131));
-        botonEnviar.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        botonEnviar.setText("Enviar");
-        botonEnviar.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
-        botonEnviar.addActionListener(new java.awt.event.ActionListener() {
+        botonActualizar.setBackground(new java.awt.Color(131, 131, 131));
+        botonActualizar.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        botonActualizar.setText("Actualizar");
+        botonActualizar.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        botonActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonEnviarActionPerformed(evt);
+                botonActualizarActionPerformed(evt);
             }
         });
-        jPanel1.add(botonEnviar);
-        botonEnviar.setBounds(400, 460, 170, 60);
+        jPanel1.add(botonActualizar);
+        botonActualizar.setBounds(400, 460, 170, 60);
 
         campoApellido.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         campoApellido.addActionListener(new java.awt.event.ActionListener() {
@@ -257,17 +262,15 @@ public class CreateView extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 950, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 600, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
@@ -279,9 +282,9 @@ public class CreateView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_campoTipoTelefonoActionPerformed
 
-    private void botonEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEnviarActionPerformed
+    private void botonActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActualizarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonEnviarActionPerformed
+    }//GEN-LAST:event_botonActualizarActionPerformed
 
     private void campoApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoApellidoActionPerformed
         // TODO add your handling code here:
@@ -311,6 +314,10 @@ public class CreateView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_botonVolverActionPerformed
 
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -328,27 +335,26 @@ public class CreateView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CreateView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CreateView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CreateView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CreateView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
 
-        /* CreateView and display the form */
+        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CreateView().setVisible(true);
+                new EditView().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton botonEnviar;
+    public javax.swing.JButton botonActualizar;
     public javax.swing.JButton botonVolver;
     public javax.swing.JTextField campoApellido;
     public javax.swing.JTextField campoCelular;
