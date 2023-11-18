@@ -35,9 +35,9 @@ public class CreateController implements ActionListener {
         vistaPrincipal.setTitle("Gestion de usuarios");
         vistaPrincipal.setLocationRelativeTo(null);
         vistaCrear.setTitle("Agregar Usuarios");
-        //vistaCrear.setLocationRelativeTo(null);
         
     }
+    
     //Boton para las intrucciones del evento del boton "Crear".
     @Override
     public void actionPerformed(ActionEvent e ) {
@@ -48,18 +48,19 @@ public class CreateController implements ActionListener {
             vistaCrear.setVisible(true);
             vistaCrear.setSize(vistaPrincipal.getWidth(), vistaPrincipal.getHeight());
             vistaCrear.setLocationRelativeTo(null);
-        }
-        if(e.getSource() == vistaCrear.botonEnviar){
             
-            //Establecerle los valores a los campos de la vista crear.
-            JOptionPane.showMessageDialog(null,"Boton Presionado");
             createModel.setNombre(vistaCrear.campoNombre.getText());
             createModel.setApellido(vistaCrear.campoApellido.getText());
             createModel.setDireccion(vistaCrear.campoApellido.getText());
             createModel.setCelular(Integer.parseInt(vistaCrear.campoApellido.getText()));
             createModel.setId(Integer.parseInt(vistaCrear.campoId.getText()));
             createModel.setNacimiento(vistaCrear.campoNacimiento.getText());
+        }
+        if(e.getSource() == vistaCrear.botonEnviar){
+            
+            //Establecerle los valores a los campos de la vista crear.
             createModel.almacenarUsuarios();
+            JOptionPane.showMessageDialog(null,"Usuario almacenado");
             //createModel.setNombre(vistaCrear.tipoUsuarioComboBox.getText());
             
                     

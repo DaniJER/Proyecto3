@@ -100,9 +100,9 @@ public class Create{
         JOptionPane.showMessageDialog(null, usuarios);
     }
     
-    public void mostrarCambiosGuardados(){
+    public void mostraUsarios(){
         
-       JOptionPane.showMessageDialog(null,"Usuario guardado con exito");
+        System.out.println("el nombre del usuario es: "+nombre);
         
     }
     

@@ -1,8 +1,10 @@
 view\PrincipalView$5.class
+view\DeleteView$3.class
 view\CreateView$1.class
 view\CreateView$7.class
 model\DefaultUser.class
 view\CreateView$4.class
+view\DeleteView$2.class
 controller\PrincipalController.class
 view\CreateView$5.class
 view\PrincipalView$4.class
@@ -12,12 +14,14 @@ view\PrincipalView.class
 view\CreateView$10.class
 view\CreateView$8.class
 main\MiniProyecto3.class
+view\DeleteView$1.class
 view\CreateView$6.class
 model\Create.class
 view\CreateView$2.class
 view\CreateView$9.class
 view\PrincipalView$3.class
 view\PrincipalView$2.class
+view\DeleteView.class
 view\CreateView.class
 view\CreateView$3.class
 model\CuentasUsuarios.class
