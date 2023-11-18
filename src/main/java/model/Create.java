@@ -97,14 +97,9 @@ public class Create{
     
     public void almacenarUsuarios(){
         usuarios.add(this);
-        JOptionPane.showMessageDialog(null, usuarios);
+        JOptionPane.showMessageDialog(null,"Usuario guardado con exito");
+        JOptionPane.showMessageDialog(null, usuarios.add(this););
     }
-    
-    public void mostrarCambiosGuardados(){
-        
-       JOptionPane.showMessageDialog(null,"Usuario guardado con exito");
-        
-    }
-    
+
 }
 

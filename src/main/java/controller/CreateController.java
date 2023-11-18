@@ -60,9 +60,10 @@ public class CreateController implements ActionListener {
             createModel.setId(Integer.parseInt(vistaCrear.campoId.getText()));
             createModel.setNacimiento(vistaCrear.campoNacimiento.getText());
             createModel.almacenarUsuarios();
+            createModel.mostrarCambiosGuardados();
             //createModel.setNombre(vistaCrear.tipoUsuarioComboBox.getText());
             
-                    
+      
         }
         if(e.getSource() == vistaCrear.botonVolver){
             //JOptionPane.showMessageDialog(null,"Se presiono boton volver");
