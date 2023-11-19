@@ -26,7 +26,6 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import javax.swing.JOptionPane;
-
 /**
  *
  * @author El Rey
@@ -38,6 +37,7 @@ public class Create{
     private String nacimiento;
     private String celular;
     private String direccion;
+    private int cedula;
     private int id;
     
     final Set<String> datosUsuarios = new HashSet<String>();
@@ -83,12 +83,12 @@ public class Create{
         this.direccion = direccion;
     }
 
-    public int getId() {
-        return id;
+    public int getCedula() {
+        return cedula;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(int cedula) {
+        this.cedula = cedula;
     }
     
     //Metodo para almacenar datos en dos colecciones.
@@ -96,11 +96,28 @@ public class Create{
      
         datosUsuarios.add(this.nombre);
         datosUsuarios.add(this.apellido);
-        datosUsuarios.add(this.direccion);
         datosUsuarios.add(this.nacimiento);
         datosUsuarios.add(valueOf(this.celular));
+        datosUsuarios.add(this.direccion);
+        datosUsuarios.add(valueOf(this.cedula));
+        
+        
+        
         
         ids.put(id, valueOf(datosUsuarios));
+        
         System.out.println("DATOS " + ids );
+    }
+    
+    public void comprobarUsuarios(){
+        
+        for (int i = 0; i < ids.size(); i++) {
+            
+            if(ids.get(i) == ids.get(id)){
+                System.out.println("El usuario ya se encuentra registrado, ¿desea sobrescribirlo o desea volver?");
+            }
+        };
+        
+    
     }
 }

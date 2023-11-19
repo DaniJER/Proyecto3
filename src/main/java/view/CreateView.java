@@ -32,7 +32,7 @@ public class CreateView extends javax.swing.JFrame {
         jTextField17 = new javax.swing.JTextField();
         botonEnviar = new javax.swing.JButton();
         campoApellido = new javax.swing.JTextField();
-        campoId = new javax.swing.JTextField();
+        campoCedula = new javax.swing.JTextField();
         campoNombre = new javax.swing.JTextField();
         campoCelular = new javax.swing.JTextField();
         campoNacimiento = new javax.swing.JTextField();
@@ -106,9 +106,9 @@ public class CreateView extends javax.swing.JFrame {
         jPanel1.add(campoApellido);
         campoApellido.setBounds(280, 320, 180, 40);
 
-        campoId.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel1.add(campoId);
-        campoId.setBounds(720, 380, 180, 40);
+        campoCedula.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel1.add(campoCedula);
+        campoCedula.setBounds(720, 380, 180, 40);
 
         campoNombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         campoNombre.addActionListener(new java.awt.event.ActionListener() {
@@ -351,9 +351,9 @@ public class CreateView extends javax.swing.JFrame {
     public javax.swing.JButton botonEnviar;
     public javax.swing.JButton botonVolver;
     public javax.swing.JTextField campoApellido;
+    public javax.swing.JTextField campoCedula;
     public javax.swing.JTextField campoCelular;
     public javax.swing.JTextField campoDireccion;
-    public javax.swing.JTextField campoId;
     public javax.swing.JTextField campoNacimiento;
     public javax.swing.JTextField campoNombre;
     public javax.swing.JComboBox<String> campoTipoTelefono;
