@@ -51,9 +51,7 @@ public class CreateController implements ActionListener {
             vistaCrear.setVisible(true);
             vistaCrear.setSize(vistaPrincipal.getWidth(), vistaPrincipal.getHeight());
             vistaCrear.setLocationRelativeTo(null);
-            
-            
-            
+                 
         }
         if(e.getSource() == vistaCrear.botonEnviar){
             
