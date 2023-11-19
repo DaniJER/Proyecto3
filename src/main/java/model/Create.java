@@ -38,10 +38,10 @@ public class Create{
     private String celular;
     private String direccion;
     private int cedula;
-    private int id;
+    private int contador;
     
     final Set<String> datosUsuarios = new HashSet<String>();
-    final Map<Integer, String> ids = new HashMap <Integer, String>(); 
+    Map<Integer, String> id = new HashMap <Integer, String>(); 
     
     public String getNombre() {
         return nombre;
@@ -92,6 +92,7 @@ public class Create{
     }
     
     //Metodo para almacenar datos en dos colecciones.
+    
     public void almacenarUsuarios(){
      
         datosUsuarios.add(this.nombre);
@@ -102,18 +103,20 @@ public class Create{
         datosUsuarios.add(valueOf(this.cedula));
         
         
+        for (int i = 0; i < id.size(); i++) {
+            contador += 1;
+        }
+     
+        id.put(contador, valueOf(datosUsuarios));
         
-        
-        ids.put(id, valueOf(datosUsuarios));
-        
-        System.out.println("DATOS " + ids );
+        System.out.println("DATOS " + id );
     }
     
     public void comprobarUsuarios(){
         
-        for (int i = 0; i < ids.size(); i++) {
+        for (int i = 0; i < id.size(); i++) {
             
-            if(ids.get(i) == ids.get(id)){
+            if(id.get(i) == id.get(id)){
                 System.out.println("El usuario ya se encuentra registrado, ¿desea sobrescribirlo o desea volver?");
             }
         };

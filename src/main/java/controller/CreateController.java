@@ -65,7 +65,6 @@ public class CreateController implements ActionListener {
             createModel.comprobarUsuarios();
             createModel.almacenarUsuarios();
            
-            
         }
         if(e.getSource() == vistaCrear.botonVolver){
             vistaCrear.dispose();
