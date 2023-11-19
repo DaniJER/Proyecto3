@@ -36,7 +36,7 @@ public class Create{
     private String celular;
     private String direccion;
     private int id;
-    Set<String> usuarios = new HashSet<>();
+    Set<String> usuarios = new HashSet<>(10); 
     
     public String getNombre() {
         return nombre;
@@ -88,13 +88,16 @@ public class Create{
     
     public void almacenarUsuarios(){
         
-        usuarios.add(this.nombre);
-        usuarios.add(this.apellido);
-        usuarios.add(this.direccion);
-        usuarios.add(this.nacimiento);
-        usuarios.add(valueOf(this.celular));
-        usuarios.add(valueOf(this.id));
-        
+        for (int i = 0; i < usuarios.size(); i++) {
+            
+            usuarios.add(this.nombre);
+            //usuarios.add(this.apellido);
+            //usuarios.add(this.direccion);
+            //usuarios.add(this.nacimiento);
+            //usuarios.add(valueOf(this.celular));
+            //usuarios.add(valueOf(this.id));
+           
+        }
         System.out.println(usuarios);
         //JOptionPane.showMessageDialog(null, usuarios);
     }
@@ -104,6 +107,4 @@ public class Create{
         System.out.println("el nombre del usuario es: "+usuarios);
         
     }
-    
 }
-
