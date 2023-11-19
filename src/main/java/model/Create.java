@@ -91,6 +91,7 @@ public class Create{
         this.id = id;
     }
     
+    //Metodo para almacenar datos en dos colecciones.
     public void almacenarUsuarios(){
      
         datosUsuarios.add(this.nombre);
@@ -101,11 +102,5 @@ public class Create{
         
         ids.put(id, valueOf(datosUsuarios));
         System.out.println("DATOS " + ids );
-    }
-    
-    public void mostrarUsarios(){
-        
-       //System.out.println("el nombre del usuario es: "+usuarios);
-        
     }
 }
