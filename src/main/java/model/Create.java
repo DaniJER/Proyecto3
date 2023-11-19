@@ -104,23 +104,23 @@ public class Create{
         
         
         for (int i = 0; i < id.size(); i++) {
-            contador += 1;
+            
+            contador = i + 1;
+            
         }
-     
-        id.put(contador, valueOf(datosUsuarios));
-        
-        System.out.println("DATOS " + id );
+        id.put(contador, valueOf(datosUsuarios));        
+        System.out.println("DATOS: " + id + "/n" );
     }
     
-    public void comprobarUsuarios(){
+    /*public void comprobarUsuarios(){
         
         for (int i = 0; i < id.size(); i++) {
-            
+        
             if(id.get(i) == id.get(id)){
                 System.out.println("El usuario ya se encuentra registrado, ¿desea sobrescribirlo o desea volver?");
             }
         };
         
     
-    }
+    }*/
 }
