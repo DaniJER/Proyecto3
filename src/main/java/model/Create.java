@@ -18,6 +18,7 @@ DANIEL JOSE ENRIQUEZ, COD: 2240920 Y JUAN SEBASTIAN VIEDMAN, COD: 2242562
  */
 
 import controller.CreateController;
+import static java.lang.String.valueOf;
 import view.PrincipalView;
 import java.util.HashSet;
 import java.util.Set;
@@ -32,20 +33,10 @@ public class Create{
     private String nombre;
     private String apellido;
     private String nacimiento;
-    private int celular;
+    private String celular;
     private String direccion;
     private int id;
-    Set<Create> usuarios = new HashSet<>();
-
-   /* public Create(String nombre, String apellido, String nacimiento, int celular, String direccion, int id, PrincipalView vistaPrincipal) {
-        super(vistaPrincipal);
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.nacimiento = nacimiento;
-        this.celular = celular;
-        this.direccion = direccion;
-        this.id = id;
-    }*/
+    Set<String> usuarios = new HashSet<>();
     
     public String getNombre() {
         return nombre;
@@ -71,11 +62,11 @@ public class Create{
         this.nacimiento = nacimiento;
     }
 
-    public int getCelular() {
+    public String getCelular() {
         return celular;
     }
 
-    public void setCelular(int celular) {
+    public void setCelular(String celular) {
         this.celular = celular;
     }
 
@@ -96,13 +87,21 @@ public class Create{
     }
     
     public void almacenarUsuarios(){
-        usuarios.add(this);
-        JOptionPane.showMessageDialog(null, usuarios);
+        
+        usuarios.add(this.nombre);
+        usuarios.add(this.apellido);
+        usuarios.add(this.direccion);
+        usuarios.add(this.nacimiento);
+        usuarios.add(valueOf(this.celular));
+        usuarios.add(valueOf(this.id));
+        
+        System.out.println(usuarios);
+        //JOptionPane.showMessageDialog(null, usuarios);
     }
     
-    public void mostraUsarios(){
+    public void mostrarUsarios(){
         
-        System.out.println("el nombre del usuario es: "+nombre);
+        System.out.println("el nombre del usuario es: "+usuarios);
         
     }
     

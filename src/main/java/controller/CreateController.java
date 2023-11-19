@@ -7,6 +7,7 @@ import view.*;
 import model.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import static java.lang.String.valueOf;
 import javax.swing.JOptionPane;
 
 /**
@@ -25,6 +26,7 @@ public class CreateController implements ActionListener {
         this.vistaPrincipal = vistaPrincipal;
         this.createModel = createModel;
         this.vistaCrear = vistaCrear;
+        
         //llamar el boton de la vista y añadirle el metodo ActionListener
         vistaPrincipal.botonAgregar.addActionListener(this); 
         vistaCrear.botonEnviar.addActionListener(this);
@@ -44,29 +46,29 @@ public class CreateController implements ActionListener {
          
         if(e.getSource() == vistaPrincipal.botonAgregar){
             //Cerrar la ventana principal el programa y abrir la ventana para crear un usuario
+            
             vistaPrincipal.dispose();
             vistaCrear.setVisible(true);
             vistaCrear.setSize(vistaPrincipal.getWidth(), vistaPrincipal.getHeight());
             vistaCrear.setLocationRelativeTo(null);
             
-            createModel.setNombre(vistaCrear.campoNombre.getText());
-            createModel.setApellido(vistaCrear.campoApellido.getText());
-            createModel.setDireccion(vistaCrear.campoApellido.getText());
-            createModel.setCelular(Integer.parseInt(vistaCrear.campoApellido.getText()));
-            createModel.setId(Integer.parseInt(vistaCrear.campoId.getText()));
-            createModel.setNacimiento(vistaCrear.campoNacimiento.getText());
+            
+            
         }
         if(e.getSource() == vistaCrear.botonEnviar){
             
-            //Establecerle los valores a los campos de la vista crear.
-            createModel.almacenarUsuarios();
-            JOptionPane.showMessageDialog(null,"Usuario almacenado");
-            //createModel.setNombre(vistaCrear.tipoUsuarioComboBox.getText());
+            createModel.setNombre(vistaCrear.campoNombre.getText());
+            createModel.setApellido(vistaCrear.campoApellido.getText());
+            createModel.setDireccion(vistaCrear.campoDireccion.getText());
+            createModel.setCelular(vistaCrear.campoCelular.getText());
+            createModel.setId(Integer.parseInt(vistaCrear.campoId.getText()));
+            createModel.setNacimiento(vistaCrear.campoNacimiento.getText());
             
-                    
+            createModel.almacenarUsuarios();
+           
+            
         }
         if(e.getSource() == vistaCrear.botonVolver){
-            //JOptionPane.showMessageDialog(null,"Se presiono boton volver");
             vistaCrear.dispose();
             vistaPrincipal.setVisible(true);
             
