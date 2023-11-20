@@ -7,6 +7,7 @@ import view.*;
 import model.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import static java.lang.String.valueOf;
 import javax.swing.JOptionPane;
 
 /**
@@ -25,6 +26,7 @@ public class CreateController implements ActionListener {
         this.vistaPrincipal = vistaPrincipal;
         this.createModel = createModel;
         this.vistaCrear = vistaCrear;
+        
         //llamar el boton de la vista y añadirle el metodo ActionListener
         vistaPrincipal.botonAgregar.addActionListener(this); 
         vistaCrear.botonEnviar.addActionListener(this);
@@ -35,45 +37,43 @@ public class CreateController implements ActionListener {
         vistaPrincipal.setTitle("Gestion de usuarios");
         vistaPrincipal.setLocationRelativeTo(null);
         vistaCrear.setTitle("Agregar Usuarios");
-        //vistaCrear.setLocationRelativeTo(null);
         
     }
+    
     //Boton para las intrucciones del evento del boton "Crear".
     @Override
     public void actionPerformed(ActionEvent e ) {
          
         if(e.getSource() == vistaPrincipal.botonAgregar){
+            
             //Cerrar la ventana principal el programa y abrir la ventana para crear un usuario
+            
             vistaPrincipal.dispose();
             vistaCrear.setVisible(true);
             vistaCrear.setSize(vistaPrincipal.getWidth(), vistaPrincipal.getHeight());
             vistaCrear.setLocationRelativeTo(null);
+                 
         }
         if(e.getSource() == vistaCrear.botonEnviar){
             
-            //Establecerle los valores a los campos de la vista crear.
-            JOptionPane.showMessageDialog(null,"Boton Presionado");
             createModel.setNombre(vistaCrear.campoNombre.getText());
             createModel.setApellido(vistaCrear.campoApellido.getText());
-            createModel.setDireccion(vistaCrear.campoApellido.getText());
-            createModel.setCelular(Integer.parseInt(vistaCrear.campoApellido.getText()));
-            createModel.setId(Integer.parseInt(vistaCrear.campoId.getText()));
+            createModel.setDireccion(vistaCrear.campoDireccion.getText());
+            createModel.setCelular(vistaCrear.campoCelular.getText());
+            createModel.setCedula(Integer.parseInt(vistaCrear.campoCedula.getText()));
             createModel.setNacimiento(vistaCrear.campoNacimiento.getText());
+
+
+            createModel.comprobarUsuarios();
             createModel.almacenarUsuarios();
-            createModel.mostrarCambiosGuardados();
-            //createModel.setNombre(vistaCrear.tipoUsuarioComboBox.getText());
-            
-      
+           
         }
+        
         if(e.getSource() == vistaCrear.botonVolver){
-            //JOptionPane.showMessageDialog(null,"Se presiono boton volver");
+            
             vistaCrear.dispose();
             vistaPrincipal.setVisible(true);
             
-            }
-
-       
-        
-    }
-    
+        }
+    }   
 }
