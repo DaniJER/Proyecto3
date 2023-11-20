@@ -13,8 +13,8 @@ view\PrincipalView$1.class
 controller\DeleteController.class
 view\PrincipalView.class
 view\ReadView$1.class
-model\Delete.class
 view\CreateView$10.class
+model\Delete.class
 view\CreateView$8.class
 view\ReadView$3.class
 main\MiniProyecto3.class
