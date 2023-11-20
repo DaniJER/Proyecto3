@@ -18,11 +18,14 @@ DANIEL JOSE ENRIQUEZ, COD: 2240920 Y JUAN SEBASTIAN VIEDMAN, COD: 2242562
  */
 
 import controller.CreateController;
+import java.awt.List;
+import static java.lang.String.valueOf;
+import java.util.HashMap;
 import view.PrincipalView;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 import javax.swing.JOptionPane;
-
 /**
  *
  * @author El Rey
@@ -32,20 +35,13 @@ public class Create{
     private String nombre;
     private String apellido;
     private String nacimiento;
-    private int celular;
+    private String celular;
     private String direccion;
-    private int id;
-    Set<Create> usuarios = new HashSet<>();
-
-   /* public Create(String nombre, String apellido, String nacimiento, int celular, String direccion, int id, PrincipalView vistaPrincipal) {
-        super(vistaPrincipal);
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.nacimiento = nacimiento;
-        this.celular = celular;
-        this.direccion = direccion;
-        this.id = id;
-    }*/
+    private int cedula;
+    private int contador;
+    
+    Set<String> datosUsuarios = new HashSet<String>();
+    Map<Integer, String> id = new HashMap <Integer, String>(); 
     
     public String getNombre() {
         return nombre;
@@ -71,11 +67,11 @@ public class Create{
         this.nacimiento = nacimiento;
     }
 
-    public int getCelular() {
+    public String getCelular() {
         return celular;
     }
 
-    public void setCelular(int celular) {
+    public void setCelular(String celular) {
         this.celular = celular;
     }
 
@@ -87,24 +83,69 @@ public class Create{
         this.direccion = direccion;
     }
 
-    public int getId() {
-        return id;
+    public int getCedula() {
+        return cedula;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCedula(int cedula) {
+        this.cedula = cedula;
+    }
+
+    public Map<Integer, String> getId() {
+        return id;
     }
     
-    public void almacenarUsuarios(){
-        usuarios.add(this);
-        JOptionPane.showMessageDialog(null, usuarios);
-    }
+    //Metodo para almacenar datos en dos colecciones.
     
-    public void mostrarCambiosGuardados(){
+     public void almacenarUsuarios(){
+     
+        datosUsuarios.add(this.nombre);
+        datosUsuarios.add(this.apellido);
+        datosUsuarios.add(this.nacimiento);
+        datosUsuarios.add(valueOf(this.celular));
+        datosUsuarios.add(this.direccion);
+        datosUsuarios.add(valueOf(this.cedula));
         
-       JOptionPane.showMessageDialog(null,"Usuario guardado con exito");
+        for (int i = 0; i < id.size(); i++) {
+            
+            contador = i + 1;    
+        }
+        
+        id.put(contador, valueOf(datosUsuarios));        
+        System.out.println("DATOS: " + id + '\n');
+        JOptionPane.showMessageDialog(null,"Usuario agregado");
         
     }
     
-}
+     public void comprobarUsuarios(){
+            
+        for (String usuarioData : id.values()) {
+            
+            if (usuarioData.contains(String.valueOf(this.cedula))) {
+                    
+                JOptionPane.showMessageDialog(null,"Se encontró una cédula ya inscrita en nuestro sistema");
+                return; // Terminar la búsqueda si se encuentra una cédula duplicada.
+                
+            }else{ almacenarUsuarios();}
+        }           
+    }
+     
+    /*public void mostrarYAlmacenar(){
+    
+        for (String usuarioData : id.values()) {
+            
+            do {
+                almacenarUsuarios();
+                
+            //}while(String.valueOf(this.cedula) != usuarioData.contains(valueOf(cedula)));
+        }         
+    
+    
+    
+   }*/
+    
+   
+    
+   
+}  
 
