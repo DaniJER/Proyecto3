@@ -34,9 +34,14 @@ public class DeleteView extends javax.swing.JFrame {
         botonVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(0, 0));
+        setPreferredSize(new java.awt.Dimension(950, 600));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(196, 196, 196));
+        jPanel1.setMaximumSize(new java.awt.Dimension(0, 0));
+        jPanel1.setMinimumSize(new java.awt.Dimension(0, 0));
+        jPanel1.setPreferredSize(new java.awt.Dimension(950, 600));
         jPanel1.setLayout(null);
 
         jTextField17.setBackground(new java.awt.Color(196, 196, 196));
@@ -62,7 +67,14 @@ public class DeleteView extends javax.swing.JFrame {
         botonEliminar.setBounds(410, 400, 170, 60);
 
         buscarId.setBackground(new java.awt.Color(255, 255, 255));
+        buscarId.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        buscarId.setForeground(new java.awt.Color(0, 0, 0));
+        buscarId.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         buscarId.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        buscarId.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        buscarId.setMaximumSize(new java.awt.Dimension(0, 0));
+        buscarId.setMinimumSize(new java.awt.Dimension(0, 0));
+        buscarId.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(buscarId);
         buscarId.setBounds(330, 280, 320, 65);
 

@@ -39,6 +39,11 @@ public class DeleteController implements ActionListener{
             vistaEliminar.setVisible(true);
             
         }
-    }
+        
+        if(e.getSource() == vistaEliminar.botonVolver){
+            vistaEliminar.dispose();
+            vistaPrincipal.setVisible(true);
+        }
+    } 
     
 }

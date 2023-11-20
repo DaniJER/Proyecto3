@@ -28,7 +28,7 @@ public class ListView extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jTextField17 = new javax.swing.JTextField();
-        botonEliminar = new javax.swing.JButton();
+        botonListar = new javax.swing.JButton();
         buscarId = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         botonVolver = new javax.swing.JButton();
@@ -47,20 +47,23 @@ public class ListView extends javax.swing.JFrame {
         jPanel1.add(jTextField17);
         jTextField17.setBounds(211, 540, 520, 19);
 
-        botonEliminar.setBackground(new java.awt.Color(131, 131, 131));
-        botonEliminar.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        botonEliminar.setForeground(new java.awt.Color(0, 0, 0));
-        botonEliminar.setText("Aceptar");
-        botonEliminar.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
-        botonEliminar.addActionListener(new java.awt.event.ActionListener() {
+        botonListar.setBackground(new java.awt.Color(131, 131, 131));
+        botonListar.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        botonListar.setForeground(new java.awt.Color(0, 0, 0));
+        botonListar.setText("Aceptar");
+        botonListar.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        botonListar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonEliminarActionPerformed(evt);
+                botonListarActionPerformed(evt);
             }
         });
-        jPanel1.add(botonEliminar);
-        botonEliminar.setBounds(410, 400, 170, 60);
+        jPanel1.add(botonListar);
+        botonListar.setBounds(410, 400, 170, 60);
 
         buscarId.setBackground(new java.awt.Color(255, 255, 255));
+        buscarId.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        buscarId.setForeground(new java.awt.Color(0, 0, 0));
+        buscarId.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         buscarId.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jPanel1.add(buscarId);
         buscarId.setBounds(330, 280, 320, 65);
@@ -76,7 +79,7 @@ public class ListView extends javax.swing.JFrame {
         jLabel5.setPreferredSize(new java.awt.Dimension(0, 0));
         jLabel5.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(190, 150, 690, 70);
+        jLabel5.setBounds(160, 140, 690, 70);
 
         botonVolver.setBackground(new java.awt.Color(196, 196, 196));
         botonVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/close.png"))); // NOI18N
@@ -113,9 +116,9 @@ public class ListView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarActionPerformed
+    private void botonListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonListarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonEliminarActionPerformed
+    }//GEN-LAST:event_botonListarActionPerformed
 
     private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
         // TODO add your handling code here:
@@ -157,7 +160,7 @@ public class ListView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton botonEliminar;
+    public javax.swing.JButton botonListar;
     public javax.swing.JButton botonVolver;
     public javax.swing.JTextField buscarId;
     private javax.swing.JLabel jLabel5;
