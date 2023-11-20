@@ -18,12 +18,14 @@ DANIEL JOSE ENRIQUEZ, COD: 2240920 Y JUAN SEBASTIAN VIEDMAN, COD: 2242562
  */
 
 import controller.CreateController;
+import java.awt.List;
 import static java.lang.String.valueOf;
+import java.util.HashMap;
 import view.PrincipalView;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 import javax.swing.JOptionPane;
-
 /**
  *
  * @author El Rey
@@ -35,8 +37,11 @@ public class Create{
     private String nacimiento;
     private String celular;
     private String direccion;
-    private int id;
-    Set<String> usuarios = new HashSet<>();
+    private int cedula;
+    private int contador;
+    
+    final Set<String> datosUsuarios = new HashSet<String>();
+    Map<Integer, String> id = new HashMap <Integer, String>(); 
     
     public String getNombre() {
         return nombre;
@@ -78,32 +83,44 @@ public class Create{
         this.direccion = direccion;
     }
 
-    public int getId() {
-        return id;
+    public int getCedula() {
+        return cedula;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(int cedula) {
+        this.cedula = cedula;
     }
+    
+    //Metodo para almacenar datos en dos colecciones.
     
     public void almacenarUsuarios(){
+     
+        datosUsuarios.add(this.nombre);
+        datosUsuarios.add(this.apellido);
+        datosUsuarios.add(this.nacimiento);
+        datosUsuarios.add(valueOf(this.celular));
+        datosUsuarios.add(this.direccion);
+        datosUsuarios.add(valueOf(this.cedula));
         
-        usuarios.add(this.nombre);
-        usuarios.add(this.apellido);
-        usuarios.add(this.direccion);
-        usuarios.add(this.nacimiento);
-        usuarios.add(valueOf(this.celular));
-        usuarios.add(valueOf(this.id));
         
-        System.out.println(usuarios);
-        //JOptionPane.showMessageDialog(null, usuarios);
+        for (int i = 0; i < id.size(); i++) {
+            
+            contador = i + 1;
+            
+        }
+        id.put(contador, valueOf(datosUsuarios));        
+        System.out.println("DATOS: " + id + "/n" );
     }
     
-    public void mostrarUsarios(){
+    /*public void comprobarUsuarios(){
         
-        System.out.println("el nombre del usuario es: "+usuarios);
+        for (int i = 0; i < id.size(); i++) {
         
-    }
+            if(id.get(i) == id.get(id)){
+                System.out.println("El usuario ya se encuentra registrado, ¿desea sobrescribirlo o desea volver?");
+            }
+        };
+        
     
+    }*/
 }
-
