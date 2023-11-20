@@ -45,6 +45,7 @@ public class CreateController implements ActionListener {
     public void actionPerformed(ActionEvent e ) {
          
         if(e.getSource() == vistaPrincipal.botonAgregar){
+            
             //Cerrar la ventana principal el programa y abrir la ventana para crear un usuario
             
             vistaPrincipal.dispose();
@@ -59,21 +60,19 @@ public class CreateController implements ActionListener {
             createModel.setApellido(vistaCrear.campoApellido.getText());
             createModel.setDireccion(vistaCrear.campoDireccion.getText());
             createModel.setCelular(vistaCrear.campoCelular.getText());
-            createModel.setId(Integer.parseInt(vistaCrear.campoCedula.getText()));
+            createModel.setCedula(Integer.parseInt(vistaCrear.campoCedula.getText()));
             createModel.setNacimiento(vistaCrear.campoNacimiento.getText());
             
-            //createModel.comprobarUsuarios();
-            createModel.almacenarUsuarios();
+            createModel.comprobarUsuarios();
+            //createModel.almacenarUsuarios();
            
         }
+        
         if(e.getSource() == vistaCrear.botonVolver){
+            
             vistaCrear.dispose();
             vistaPrincipal.setVisible(true);
             
-            }
-
-       
-        
-    }
-    
+        }
+    }   
 }

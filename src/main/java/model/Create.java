@@ -40,7 +40,7 @@ public class Create{
     private int cedula;
     private int contador;
     
-    final Set<String> datosUsuarios = new HashSet<String>();
+    Set<String> datosUsuarios = new HashSet<String>();
     Map<Integer, String> id = new HashMap <Integer, String>(); 
     
     public String getNombre() {
@@ -87,13 +87,13 @@ public class Create{
         return cedula;
     }
 
-    public void setId(int cedula) {
+    public void setCedula(int cedula) {
         this.cedula = cedula;
     }
     
     //Metodo para almacenar datos en dos colecciones.
     
-    public void almacenarUsuarios(){
+     public void almacenarUsuarios(){
      
         datosUsuarios.add(this.nombre);
         datosUsuarios.add(this.apellido);
@@ -102,25 +102,46 @@ public class Create{
         datosUsuarios.add(this.direccion);
         datosUsuarios.add(valueOf(this.cedula));
         
-        
         for (int i = 0; i < id.size(); i++) {
             
-            contador = i + 1;
-            
+            contador = i + 1;    
         }
+        
         id.put(contador, valueOf(datosUsuarios));        
-        System.out.println("DATOS: " + id + "/n" );
+        System.out.println("DATOS: " + id + '\n');
+        JOptionPane.showMessageDialog(null,"Usuario agregado");
+        
     }
     
-    /*public void comprobarUsuarios(){
-        
-        for (int i = 0; i < id.size(); i++) {
-        
-            if(id.get(i) == id.get(id)){
-                System.out.println("El usuario ya se encuentra registrado, ¿desea sobrescribirlo o desea volver?");
-            }
-        };
-        
+     public void comprobarUsuarios(){
+            
+        for (String usuarioData : id.values()) {
+            
+            if (usuarioData.contains(String.valueOf(this.cedula))) {
+                    
+                JOptionPane.showMessageDialog(null,"Se encontró una cédula ya inscrita en nuestro sistema");
+                return; // Terminar la búsqueda si se encuentra una cédula duplicada.
+                
+            }else{ almacenarUsuarios();}
+        }           
+    }
+     
+    public void mostrarYAlmacenar(){
     
-    }*/
-}
+        for (String usuarioData : id.values()) {
+            
+            do {
+                almacenarUsuarios();
+                
+            }while(String.valueOf(this.cedula) != usuarioData.contains(valueOf(cedula)));
+        }         
+    
+    
+    
+    }
+    
+   
+    
+   
+}  
+
