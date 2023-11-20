@@ -7,16 +7,18 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import view. *;
+import model. *;
 /**
  *
  * @author Juan
  */
-public class ListController implements ActionListener {
+public class ReadController implements ActionListener {
     private PrincipalView vistaPrincipal;
-    private ListView vistaListar;
+    private ReadView vistaListar;
+    private Read leer;
     
     
-    public ListController(PrincipalView vistaPrincipal, ListView vistaListar){
+    public ReadController(PrincipalView vistaPrincipal, ReadView vistaListar){
         this.vistaPrincipal = vistaPrincipal;
         this.vistaListar = vistaListar;
         vistaPrincipal.botonListar.addActionListener(this);
@@ -40,6 +42,10 @@ public class ListController implements ActionListener {
         if (e.getSource () == vistaListar.botonVolver){
             vistaListar.dispose();
             vistaPrincipal.setVisible(true);
+        }
+        if (e.getSource () == vistaListar.botonListar){
+            System.out.println();
+            leer.leerColeccion();
         }
     }
     
