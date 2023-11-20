@@ -3,7 +3,6 @@ view\DeleteView$3.class
 view\ListView$3.class
 view\CreateView$1.class
 view\CreateView$7.class
-model\DefaultUser.class
 view\CreateView$4.class
 view\DeleteView$2.class
 controller\PrincipalController.class
@@ -32,4 +31,3 @@ view\PrincipalView$2.class
 view\DeleteView.class
 view\CreateView.class
 view\CreateView$3.class
-model\CuentasUsuarios.class
