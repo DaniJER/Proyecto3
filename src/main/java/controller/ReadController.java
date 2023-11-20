@@ -13,6 +13,7 @@ import model. *;
  * @author Juan
  */
 public class ReadController implements ActionListener {
+    
     private PrincipalView vistaPrincipal;
     private ReadView vistaListar;
     private Read leer;
