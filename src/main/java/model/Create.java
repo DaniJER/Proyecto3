@@ -126,19 +126,19 @@ public class Create{
         }           
     }
      
-    public void mostrarYAlmacenar(){
+    /*public void mostrarYAlmacenar(){
     
         for (String usuarioData : id.values()) {
             
             do {
                 almacenarUsuarios();
                 
-            }while(String.valueOf(this.cedula) != usuarioData.contains(valueOf(cedula)));
+            //}while(String.valueOf(this.cedula) != usuarioData.contains(valueOf(cedula)));
         }         
     
     
     
-    }
+   }*/
     
    
     
