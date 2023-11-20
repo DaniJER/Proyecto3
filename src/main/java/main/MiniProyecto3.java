@@ -4,14 +4,9 @@
 
 package main;
 
-import controller.CreateController;
-import controller.EditController;
-import model.Create;
-import model.Edit;
-import view.CreateView;
-import view.EditView;
-import view.PrincipalView;
-import view.SearchUserToUpdateView;
+import controller. *;
+import model. *;
+import view. *;
 /**
  *
  * @author El Rey
@@ -27,6 +22,8 @@ public class MiniProyecto3 {
         Edit modeloEditar = new Edit();
         EditView vistaEditar = new EditView();
         SearchUserToUpdateView vistaBuscarYActualizarUsuario = new SearchUserToUpdateView();
+        DeleteView vistaEliminar = new DeleteView();
+        ReadView vistaListar = new ReadView();
         
         //Instanciando el objeto de la clase Create Controller y pasandole como parametro lo mismo que estaba en su constructor
         //pero en esta clase se le pasa los objetos instanciados.
@@ -37,6 +34,11 @@ public class MiniProyecto3 {
         
         EditController controladorEditar = new EditController(ventanaPrincipal,modeloEditar,vistaEditar, vistaBuscarYActualizarUsuario);
         controladorEditar.iniciarVistaEditar();
-    
+        
+        DeleteController controladorEliminar = new DeleteController(ventanaPrincipal,vistaEliminar);
+        controladorEliminar.iniciarVistaEliminar();
+        
+        ReadController controladorListar = new ReadController(ventanaPrincipal, vistaListar);
+        controladorListar.iniciarVistaListar();
     }
 }

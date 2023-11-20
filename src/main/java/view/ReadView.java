@@ -8,12 +8,12 @@ package view;
  *
  * @author Juan
  */
-public class DeleteView extends javax.swing.JFrame {
+public class ReadView extends javax.swing.JFrame {
 
     /**
-     * Creates new form DeleteView
+     * Creates new form ListView
      */
-    public DeleteView() {
+    public ReadView() {
         initComponents();
     }
 
@@ -28,20 +28,14 @@ public class DeleteView extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jTextField17 = new javax.swing.JTextField();
-        botonEliminar = new javax.swing.JButton();
+        botonListar = new javax.swing.JButton();
         buscarId = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         botonVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(0, 0));
-        setPreferredSize(new java.awt.Dimension(950, 600));
-        getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(196, 196, 196));
-        jPanel1.setMaximumSize(new java.awt.Dimension(0, 0));
-        jPanel1.setMinimumSize(new java.awt.Dimension(0, 0));
-        jPanel1.setPreferredSize(new java.awt.Dimension(950, 600));
         jPanel1.setLayout(null);
 
         jTextField17.setBackground(new java.awt.Color(196, 196, 196));
@@ -53,34 +47,31 @@ public class DeleteView extends javax.swing.JFrame {
         jPanel1.add(jTextField17);
         jTextField17.setBounds(211, 540, 520, 19);
 
-        botonEliminar.setBackground(new java.awt.Color(131, 131, 131));
-        botonEliminar.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        botonEliminar.setForeground(new java.awt.Color(0, 0, 0));
-        botonEliminar.setText("Eliminar");
-        botonEliminar.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
-        botonEliminar.addActionListener(new java.awt.event.ActionListener() {
+        botonListar.setBackground(new java.awt.Color(131, 131, 131));
+        botonListar.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        botonListar.setForeground(new java.awt.Color(0, 0, 0));
+        botonListar.setText("Aceptar");
+        botonListar.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        botonListar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonEliminarActionPerformed(evt);
+                botonListarActionPerformed(evt);
             }
         });
-        jPanel1.add(botonEliminar);
-        botonEliminar.setBounds(410, 400, 170, 60);
+        jPanel1.add(botonListar);
+        botonListar.setBounds(410, 400, 170, 60);
 
         buscarId.setBackground(new java.awt.Color(255, 255, 255));
         buscarId.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         buscarId.setForeground(new java.awt.Color(0, 0, 0));
         buscarId.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         buscarId.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        buscarId.setMaximumSize(new java.awt.Dimension(0, 0));
-        buscarId.setMinimumSize(new java.awt.Dimension(0, 0));
-        buscarId.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(buscarId);
         buscarId.setBounds(330, 280, 320, 65);
 
         jLabel5.setBackground(new java.awt.Color(196, 196, 196));
         jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("<html>Digite el número de cédula del usuario qué desea eliminar</html>\n");
+        jLabel5.setText("<html>Digite el número de cédula del usuario qué desea consultar</html> ");
         jLabel5.setFocusable(false);
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         jLabel5.setMaximumSize(new java.awt.Dimension(0, 0));
@@ -88,7 +79,7 @@ public class DeleteView extends javax.swing.JFrame {
         jLabel5.setPreferredSize(new java.awt.Dimension(0, 0));
         jLabel5.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(190, 150, 690, 70);
+        jLabel5.setBounds(160, 140, 690, 70);
 
         botonVolver.setBackground(new java.awt.Color(196, 196, 196));
         botonVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/close.png"))); // NOI18N
@@ -101,15 +92,33 @@ public class DeleteView extends javax.swing.JFrame {
         jPanel1.add(botonVolver);
         botonVolver.setBounds(60, 50, 100, 90);
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 950, 600);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 950, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarActionPerformed
+    private void botonListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonListarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonEliminarActionPerformed
+    }//GEN-LAST:event_botonListarActionPerformed
 
     private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
         // TODO add your handling code here:
@@ -132,26 +141,27 @@ public class DeleteView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DeleteView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ReadView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DeleteView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ReadView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DeleteView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ReadView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DeleteView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ReadView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DeleteView().setVisible(true);
+                new ReadView().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton botonEliminar;
+    public javax.swing.JButton botonListar;
     public javax.swing.JButton botonVolver;
     public javax.swing.JTextField buscarId;
     private javax.swing.JLabel jLabel5;

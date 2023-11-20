@@ -90,6 +90,10 @@ public class Create{
     public void setCedula(int cedula) {
         this.cedula = cedula;
     }
+
+    public Map<Integer, String> getId() {
+        return id;
+    }
     
     //Metodo para almacenar datos en dos colecciones.
     
