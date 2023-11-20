@@ -10,8 +10,8 @@ package model;
  */
 public class Read {
     public void leerColeccion(){
-        Create coleccion = new Create();
         
+        Create coleccion = new Create();
         System.out.println(coleccion.id);
         }
 }

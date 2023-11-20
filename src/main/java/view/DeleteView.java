@@ -71,7 +71,6 @@ public class DeleteView extends javax.swing.JFrame {
         buscarId.setForeground(new java.awt.Color(0, 0, 0));
         buscarId.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         buscarId.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        buscarId.setMargin(new java.awt.Insets(0, 0, 0, 0));
         buscarId.setMaximumSize(new java.awt.Dimension(0, 0));
         buscarId.setMinimumSize(new java.awt.Dimension(0, 0));
         buscarId.setPreferredSize(new java.awt.Dimension(0, 0));
