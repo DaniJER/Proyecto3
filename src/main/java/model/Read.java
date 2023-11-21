@@ -7,15 +7,23 @@
  */
 package model;  
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Juan
  */
-public class Read {
+public class Read extends Create{
+    
+    ArrayList<String> listaDeUsuarios = new ArrayList<>();
+    
+    
     public void leerColeccion(){
         
+        listaDeUsuarios.add(String.valueOf(datosUsuarios));
+        System.out.println(listaDeUsuarios);
         Create coleccion = new Create();
         //System.out.println(coleccion.getId());
-
+        
         }
 }
