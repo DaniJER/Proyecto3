@@ -38,12 +38,13 @@ public class Create{
     private String nacimiento;
     private String celular;
     private String direccion;
-    private int cedula;
+    private String cedula;
     private int contador;
     
     //Set<String> datosUsuarios = new HashSet<String>();
     //Map<Integer, String> id = new HashMap <Integer, String>(); 
-    private ArrayList<ArrayList<String>> datosUsuarios = new ArrayList();
+    ArrayList<ArrayList<String>> datosUsuarios = new ArrayList();
+    ArrayList<String> segundoArrayList = new ArrayList<>();
     
     public String getNombre() {
         return nombre;
@@ -86,10 +87,10 @@ public class Create{
     }
 
     public int getCedula() {
-        return cedula;
+        return Integer.parseInt(cedula);
     }
 
-    public void setCedula(int cedula) {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
     }
 
@@ -99,47 +100,50 @@ public class Create{
     
     //ALMACENAR DATO
     
-    public boolean comprobarUsuarios(int cedula){
+    
+    public void almacenarUsuariosPorDefault(){
         
-        ArrayList<String> segundoArrayList = new ArrayList<>();
+        segundoArrayList.add("Pepito");
+        segundoArrayList.add("Perez");
+        segundoArrayList.add("2334");
+        segundoArrayList.add("Av siempre viva 712");
+        segundoArrayList.add("junio 1999");
+        segundoArrayList.add("1008");
         
-        if(segundoArrayList.isEmpty() == true){
-            
-                segundoArrayList.add(String.valueOf(this.apellido));
-                segundoArrayList.add(this.celular);
-                segundoArrayList.add(this.direccion);
-                segundoArrayList.add(this.nacimiento);
-                segundoArrayList.add( String.valueOf(this.cedula));
-                datosUsuarios.add(segundoArrayList);
-                System.out.println("Usuario agregado");
-                System.out.println(datosUsuarios);
-                
-                for (int i = 0; i < segundoArrayList.size(); i++) {
-                    String elemento = segundoArrayList.get(i);
-                    
-                    if(String.valueOf(cedula).equals(segundoArrayList.get(String.valueOf(elemento)))){
-                        
-                        System.out.println("Usuario ya registrado :( ");
-                    
-                    }
-                }
-                
-        }  
-        /*if(segundoArrayList.isEmpty() == false){
-                    
-            if(String.valueOf(cedula).equals(segundoArrayList.contains(4))){
-        
-                System.out.println("Cedula ya registrada");
-                    return false;
-                }else{
-                      return true;
-                    }
-                  
-        }
-        }*/
-        return false;
+        datosUsuarios.add(segundoArrayList);
+       
     }
+    
+    public void almacenarUsuarios(){
+        
+        ArrayList<String> arrayDeAlmacenar = new ArrayList<>();
+        
+        arrayDeAlmacenar.add(this.nombre);
+        arrayDeAlmacenar.add(String.valueOf(this.apellido));
+        arrayDeAlmacenar.add(this.celular);
+        arrayDeAlmacenar.add(this.direccion);
+        arrayDeAlmacenar.add(this.nacimiento);
+        arrayDeAlmacenar.add( String.valueOf(this.cedula));
+        datosUsuarios.add(arrayDeAlmacenar);
+        
+        System.out.println("Usuario agregado");
+        System.out.println(datosUsuarios);   
+        
+    }
+    
+    /*public boolean comprobarUsuarios(int cedula){
             
-} 
+            if(this.cedula) == {}
+            return false;
+    };*/
+            
+}
+  
+      
+    
+ 
+    
+            
+
 
 

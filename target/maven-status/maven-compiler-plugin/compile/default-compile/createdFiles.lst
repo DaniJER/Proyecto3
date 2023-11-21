@@ -6,15 +6,15 @@ view\CreateView$7.class
 view\CreateView$4.class
 view\DeleteView$2.class
 controller\PrincipalController.class
-view\PrincipalView$4.class
 view\CreateView$5.class
+view\PrincipalView$4.class
 controller\CreateController.class
 view\PrincipalView$1.class
 controller\DeleteController.class
 view\PrincipalView.class
 view\ReadView$1.class
-view\CreateView$10.class
 model\Delete.class
+view\CreateView$10.class
 view\CreateView$8.class
 view\ReadView$3.class
 main\MiniProyecto3.class

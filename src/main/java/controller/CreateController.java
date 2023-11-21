@@ -52,6 +52,9 @@ public class CreateController implements ActionListener {
             vistaCrear.setVisible(true);
             vistaCrear.setSize(vistaPrincipal.getWidth(), vistaPrincipal.getHeight());
             vistaCrear.setLocationRelativeTo(null);
+            
+            //Guardar un registro por defecto
+            createModel.almacenarUsuariosPorDefault();
                  
         }
         if(e.getSource() == vistaCrear.botonEnviar){
@@ -60,19 +63,12 @@ public class CreateController implements ActionListener {
             createModel.setApellido(vistaCrear.campoApellido.getText());
             createModel.setDireccion(vistaCrear.campoDireccion.getText());
             createModel.setCelular(vistaCrear.campoCelular.getText());
-            createModel.setCedula(Integer.parseInt(vistaCrear.campoCedula.getText()));
+            createModel.setCedula((vistaCrear.campoCedula.getText()));
             createModel.setNacimiento(vistaCrear.campoNacimiento.getText());
 
-            createModel.comprobarUsuarios(Integer.parseInt(vistaCrear.campoCedula.getText()));
+            createModel.almacenarUsuarios();
+            //createModel.comprobarUsuarios(Integer.parseInt(vistaCrear.campoCedula.getText()));
             
-           
-        }
-        
-        if(e.getSource() == vistaCrear.botonVolver){
-            
-            vistaCrear.dispose();
-            vistaPrincipal.setVisible(true);
-            
-        }
-    }   
-}
+        };
+    };
+};
