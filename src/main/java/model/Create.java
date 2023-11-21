@@ -24,6 +24,7 @@ import controller.CreateController;
 import java.awt.List;
 import static java.lang.String.valueOf;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import view.PrincipalView;
 import java.util.HashSet;
@@ -39,7 +40,9 @@ public class Create{
     private String nombre;
     private String apellido;
     private String nacimiento;
+    private String tipoTel;
     private String celular;
+    private String tipoUsuario;
     private String direccion;
     private String cedula;
     private int contador;
@@ -98,9 +101,22 @@ public class Create{
         this.cedula = cedula;
     }
 
-    /*public Map<Integer, String> getId() {
-        return id;
-    }*/
+    public String getTipoTel(){
+        return tipoTel;
+    }
+    
+    public void setTipoTel(String tipoTel){
+        this.tipoTel = tipoTel;
+    }
+    
+    public String getTipoUsuario(){
+        return tipoUsuario;
+    }
+    
+    public void setTipoUsuario(String tipoUsuario){
+        this.tipoUsuario = tipoUsuario;
+    }
+    
     
     //ALMACENAR USUARIOS POR DEFECTO
     public void almacenarUsuariosPorDefault(){
@@ -124,6 +140,9 @@ public class Create{
         arrayDeAlmacenar.add(this.direccion);
         arrayDeAlmacenar.add(this.nacimiento);
         arrayDeAlmacenar.add( String.valueOf(this.cedula));
+        arrayDeAlmacenar.add(this.tipoTel);
+        arrayDeAlmacenar.add(this.tipoUsuario);
+        
         datosUsuarios.add(arrayDeAlmacenar);
         
         System.out.println("Usuario agregado");

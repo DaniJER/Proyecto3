@@ -72,6 +72,9 @@ public class CreateController implements ActionListener {
             createModel.setCelular(vistaCrear.campoCelular.getText());
             createModel.setCedula((vistaCrear.campoCedula.getText()));
             createModel.setNacimiento(vistaCrear.campoNacimiento.getText());
+            createModel.setTipoTel("Tipo de telefono: " +String.valueOf(vistaCrear.campoTipoTelefono.getSelectedItem()));
+            createModel.setTipoUsuario("Tipo de usuario: " + String.valueOf(vistaCrear.campoTipoUsuario.getSelectedItem()));
+
 
             createModel.comprobarUsuarios(Integer.parseInt(vistaCrear.campoCedula.getText()));
             
