@@ -1,4 +1,7 @@
 /*
+   UNIVERSIDAD DEL VALLE - TECNOLOGIA EN DESARROLLO DE SOFTWARE
+   DEVELOPED BY:DANIEL JOSE ENRIQUEZ, COD: 2240920 & JUAN SEBASTIAN VIEDMAN, COD: 2242562
+
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -45,6 +48,7 @@ public class Create{
     //Map<Integer, String> id = new HashMap <Integer, String>(); 
     ArrayList<ArrayList<String>> datosUsuarios = new ArrayList();
     ArrayList<String> segundoArrayList = new ArrayList<>();
+    ArrayList<String> arrayDeAlmacenar = new ArrayList<>();
     
     public String getNombre() {
         return nombre;
@@ -98,9 +102,7 @@ public class Create{
         return id;
     }*/
     
-    //ALMACENAR DATO
-    
-    
+    //ALMACENAR USUARIOS POR DEFECTO
     public void almacenarUsuariosPorDefault(){
         
         segundoArrayList.add("Pepito");
@@ -113,11 +115,9 @@ public class Create{
         datosUsuarios.add(segundoArrayList);
        
     }
-    
+    //ALMACENAR USUARIOS DIGITADOS
     public void almacenarUsuarios(){
-        
-        ArrayList<String> arrayDeAlmacenar = new ArrayList<>();
-        
+       
         arrayDeAlmacenar.add(this.nombre);
         arrayDeAlmacenar.add(String.valueOf(this.apellido));
         arrayDeAlmacenar.add(this.celular);
@@ -130,13 +130,25 @@ public class Create{
         System.out.println(datosUsuarios);   
         
     }
-    
-    /*public boolean comprobarUsuarios(int cedula){
+    //COMPROBAR CEDULAS DUPLICADAS
+    public boolean comprobarUsuarios(int cedula){
+      
+            for (ArrayList<String> usuario : datosUsuarios) {
+            // Obtener la cedula del usuario actual
             
-            if(this.cedula) == {}
-            return false;
-    };*/
-            
+            int cedulaActual = Integer.parseInt(usuario.get(5));
+
+            // Comparar con la cedula proporcionada
+            if (cedulaActual == cedula) {
+                
+                JOptionPane.showMessageDialog(null,"La cedula que ingresaste ya corresponde a un usuario, por favor ingresa otra");
+                return true; // Cédula duplicada encontrada
+            }
+        }
+            //Si no se encontro una cedula duplicada, almacenar un usuario.
+            almacenarUsuarios();
+            return false; // Cédula no duplicada
+    }
 }
   
       
