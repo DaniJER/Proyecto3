@@ -23,6 +23,7 @@ public class MiniProyecto3 {
         SearchUserToUpdateView vistaBuscarYActualizarUsuario = new SearchUserToUpdateView();
         DeleteView vistaEliminar = new DeleteView();
         ReadView vistaListar = new ReadView();
+        Read leer = new Read();
         
         //Instanciando el objeto de la clase Create Controller y pasandole como parametro lo mismo que estaba en su constructor
         //pero en esta clase se le pasa los objetos instanciados.
@@ -37,7 +38,7 @@ public class MiniProyecto3 {
         DeleteController controladorEliminar = new DeleteController(ventanaPrincipal,vistaEliminar);
         controladorEliminar.iniciarVistaEliminar();
         
-        ReadController controladorListar = new ReadController(ventanaPrincipal, vistaListar);
+        ReadController controladorListar = new ReadController(ventanaPrincipal, vistaListar, leer);
         controladorListar.iniciarVistaListar();
     }
 }

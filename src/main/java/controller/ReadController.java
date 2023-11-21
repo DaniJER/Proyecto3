@@ -19,9 +19,10 @@ public class ReadController implements ActionListener {
     private Read leer;
     
     
-    public ReadController(PrincipalView vistaPrincipal, ReadView vistaListar){
+    public ReadController(PrincipalView vistaPrincipal, ReadView vistaListar, Read leer){
         this.vistaPrincipal = vistaPrincipal;
         this.vistaListar = vistaListar;
+        this.leer = leer;
         vistaPrincipal.botonListar.addActionListener(this);
         vistaListar.botonListar.addActionListener(this);
         vistaListar.botonVolver.addActionListener(this);
@@ -45,7 +46,6 @@ public class ReadController implements ActionListener {
             vistaPrincipal.setVisible(true);
         }
         if (e.getSource () == vistaListar.botonListar){
-            System.out.println();
             leer.leerColeccion();
         }
     }
