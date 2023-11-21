@@ -41,9 +41,9 @@ public class Create{
     private int cedula;
     private int contador;
     
-    Set<String> datosUsuarios = new HashSet<String>();
-    Map<Integer, String> id = new HashMap <Integer, String>(); 
-    private ArrayList cedulas = new ArrayList();
+    //Set<String> datosUsuarios = new HashSet<String>();
+    //Map<Integer, String> id = new HashMap <Integer, String>(); 
+    private ArrayList<ArrayList<String>> datosUsuarios = new ArrayList();
     
     public String getNombre() {
         return nombre;
@@ -93,96 +93,53 @@ public class Create{
         this.cedula = cedula;
     }
 
-    public Map<Integer, String> getId() {
+    /*public Map<Integer, String> getId() {
         return id;
-    }
+    }*/
     
-
-    //Metodo para almacenar datos en dos colecciones.
+    //ALMACENAR DATO
     
-     public void almacenarUsuarios(){
-     
-         cedulas.add(cedula);
-         if(comprobarUsuarios(cedula) == true){
-            datosUsuarios.add(this.nombre);
-            datosUsuarios.add(this.apellido);
-            datosUsuarios.add(this.nacimiento);
-            datosUsuarios.add(valueOf(this.celular));
-            datosUsuarios.add(this.direccion);
-            datosUsuarios.add(valueOf(this.cedula));
+    public boolean comprobarUsuarios(int cedula){
+        
+        ArrayList<String> segundoArrayList = new ArrayList<>();
+        
+        if(segundoArrayList.isEmpty() == true){
             
-
-            for (int i = 0; i < id.size(); i++) {
-
-                contador = i + 1;    
-            }
-
-            id.put(contador, valueOf(datosUsuarios));        
-            System.out.println("DATOS: " + id + '\n');
-            JOptionPane.showMessageDialog(null,"Usuario agregado");
-         
-         }
-         /*
-        datosUsuarios.add(this.nombre);
-        datosUsuarios.add(this.apellido);
-        datosUsuarios.add(this.nacimiento);
-        datosUsuarios.add(valueOf(this.celular));
-        datosUsuarios.add(this.direccion);
-        datosUsuarios.add(valueOf(this.cedula));
-        cedulas.add(cedula);
-        
-        for (int i = 0; i < id.size(); i++) {
-            
-            contador = i + 1;    
-        }
-        
-        id.put(contador, valueOf(datosUsuarios));        
-        System.out.println("DATOS: " + id + '\n');
-        JOptionPane.showMessageDialog(null,"Usuario agregado");*/
-        
-    }
-    
-     public  boolean comprobarUsuarios(int cedula){
-        
-        for (int i = 0; i < cedulas.size(); i++){
-            if(cedulas.get(String (i)) == cedula){
-                JOptionPane.showMessageDialog(null,"Se encontró una cédula ya inscrita en nuestro sistema");
-                return false;// Terminar la búsqueda si se encuentra una cédula duplicada.
-            }else{
-                //almacenarUsuarios();
-                return true;
-            }
-           
-            
-            /*if (datosUsuarios.contains(this.cedula) == cedula)
-                JOptionPane.showMessageDialog(null,"Se encontró una cédula ya inscrita en nuestro sistema");
-                return false;// Terminar la búsqueda si se encuentra una cédula duplicada.
+                segundoArrayList.add(String.valueOf(this.apellido));
+                segundoArrayList.add(this.celular);
+                segundoArrayList.add(this.direccion);
+                segundoArrayList.add(this.nacimiento);
+                segundoArrayList.add( String.valueOf(this.cedula));
+                datosUsuarios.add(segundoArrayList);
+                System.out.println("Usuario agregado");
+                System.out.println(datosUsuarios);
                 
-            }else{
+                for (int i = 0; i < segundoArrayList.size(); i++) {
+                    String elemento = segundoArrayList.get(i);
+                    
+                    if(String.valueOf(cedula).equals(segundoArrayList.get(String.valueOf(elemento)))){
+                        
+                        System.out.println("Usuario ya registrado :( ");
+                    
+                    }
+                }
                 
-                almacenarUsuarios();
-                return true;  
-                }*/
         }  
+        /*if(segundoArrayList.isEmpty() == false){
+                    
+            if(String.valueOf(cedula).equals(segundoArrayList.contains(4))){
+        
+                System.out.println("Cedula ya registrada");
+                    return false;
+                }else{
+                      return true;
+                    }
+                  
+        }
+        }*/
         return false;
     }
-     
-    /*public void mostrarYAlmacenar(){
-    
-        for (String usuarioData : id.values()) {
             
-            do {
-                almacenarUsuarios();
-                
-            //}while(String.valueOf(this.cedula) != usuarioData.contains(valueOf(cedula)));
-        }         
-    
-    
-    
-   }*/
-    
-   
-    
-   
-}  
+} 
+
 

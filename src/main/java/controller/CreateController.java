@@ -63,10 +63,8 @@ public class CreateController implements ActionListener {
             createModel.setCedula(Integer.parseInt(vistaCrear.campoCedula.getText()));
             createModel.setNacimiento(vistaCrear.campoNacimiento.getText());
 
-
-            //createModel.comprobarUsuarios(vistaCrear.campoCedula.getText());
-            createModel.almacenarUsuarios();
-            System.out.println("Hola");
+            createModel.comprobarUsuarios(Integer.parseInt(vistaCrear.campoCedula.getText()));
+            
            
         }
         

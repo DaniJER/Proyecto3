@@ -12,7 +12,7 @@ public class Read {
     public void leerColeccion(){
         
         Create coleccion = new Create();
-        System.out.println(coleccion.getId());
+        //System.out.println(coleccion.getId());
 
         }
 }
