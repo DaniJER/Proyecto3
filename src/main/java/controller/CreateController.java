@@ -38,9 +38,13 @@ public class CreateController implements ActionListener {
         }
     //Metodo que inicia la vista y establece los titulos y las dimensiones de las ventanas
     public void iniciarPrograma(){
+        
         vistaPrincipal.setTitle("Gestion de usuarios");
         vistaPrincipal.setLocationRelativeTo(null);
         vistaCrear.setTitle("Agregar Usuarios");
+        
+        //Guardar un registro por defecto
+        createModel.almacenarUsuariosPorDefault();
         
     }
     
@@ -57,8 +61,7 @@ public class CreateController implements ActionListener {
             vistaCrear.setSize(vistaPrincipal.getWidth(), vistaPrincipal.getHeight());
             vistaCrear.setLocationRelativeTo(null);
             
-            //Guardar un registro por defecto
-            createModel.almacenarUsuariosPorDefault();
+            
                  
         }
         if(e.getSource() == vistaCrear.botonEnviar){
@@ -71,6 +74,13 @@ public class CreateController implements ActionListener {
             createModel.setNacimiento(vistaCrear.campoNacimiento.getText());
 
             createModel.comprobarUsuarios(Integer.parseInt(vistaCrear.campoCedula.getText()));
+            
+        };
+        
+        if(e.getSource() == vistaCrear.botonVolver){
+            
+            vistaCrear.dispose();
+            vistaPrincipal.setVisible(true);
             
         };
     };
