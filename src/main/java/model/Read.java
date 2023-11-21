@@ -13,17 +13,13 @@ import java.util.ArrayList;
  *
  * @author Juan
  */
-public class Read extends Create{
-    
-    ArrayList<String> listaDeUsuarios = new ArrayList<>();
-    
+
+public class Read extends Create  {
     
     public void leerColeccion(){
-        
-        listaDeUsuarios.add(String.valueOf(datosUsuarios));
-        System.out.println(listaDeUsuarios);
-        Create coleccion = new Create();
-        //System.out.println(coleccion.getId());
-        
-        }
+        //ArrayList<String> arrayLeer = new ArrayList<>();
+        //arrayLeer.add()
+       System.out.println(  datosUsuarios);
+    }    
+
 }
