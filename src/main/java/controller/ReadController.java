@@ -1,4 +1,7 @@
 /*
+   UNIVERSIDAD DEL VALLE - TECNOLOGIA EN DESARROLLO DE SOFTWARE
+   DEVELOPED BY:DANIEL JOSE ENRIQUEZ, COD: 2240920 & JUAN SEBASTIAN VIEDMAN, COD: 2242562
+
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -19,9 +22,10 @@ public class ReadController implements ActionListener {
     private Read leer;
     
     
-    public ReadController(PrincipalView vistaPrincipal, ReadView vistaListar){
+    public ReadController(PrincipalView vistaPrincipal, ReadView vistaListar, Read leer){
         this.vistaPrincipal = vistaPrincipal;
         this.vistaListar = vistaListar;
+        this.leer = leer;
         vistaPrincipal.botonListar.addActionListener(this);
         vistaListar.botonListar.addActionListener(this);
         vistaListar.botonVolver.addActionListener(this);
@@ -45,7 +49,6 @@ public class ReadController implements ActionListener {
             vistaPrincipal.setVisible(true);
         }
         if (e.getSource () == vistaListar.botonListar){
-            System.out.println();
             leer.leerColeccion();
         }
     }

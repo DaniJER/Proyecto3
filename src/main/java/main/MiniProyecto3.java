@@ -1,4 +1,7 @@
 /*
+   UNIVERSIDAD DEL VALLE - TECNOLOGIA EN DESARROLLO DE SOFTWARE
+   DEVELOPED BY:DANIEL JOSE ENRIQUEZ, COD: 2240920 & JUAN SEBASTIAN VIEDMAN, COD: 2242562
+
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
@@ -23,6 +26,7 @@ public class MiniProyecto3 {
         SearchUserToUpdateView vistaBuscarYActualizarUsuario = new SearchUserToUpdateView();
         DeleteView vistaEliminar = new DeleteView();
         ReadView vistaListar = new ReadView();
+        Read leer = new Read();
         
         //Instanciando el objeto de la clase Create Controller y pasandole como parametro lo mismo que estaba en su constructor
         //pero en esta clase se le pasa los objetos instanciados.
@@ -37,7 +41,7 @@ public class MiniProyecto3 {
         DeleteController controladorEliminar = new DeleteController(ventanaPrincipal,vistaEliminar);
         controladorEliminar.iniciarVistaEliminar();
         
-        ReadController controladorListar = new ReadController(ventanaPrincipal, vistaListar);
+        ReadController controladorListar = new ReadController(ventanaPrincipal, vistaListar, leer);
         controladorListar.iniciarVistaListar();
     }
 }

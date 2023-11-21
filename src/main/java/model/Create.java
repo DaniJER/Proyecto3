@@ -100,7 +100,7 @@ public class Create{
     public void setCedula(String cedula) {
         this.cedula = cedula;
     }
-
+    
     public String getTipoTel(){
         return tipoTel;
     }
@@ -116,7 +116,7 @@ public class Create{
     public void setTipoUsuario(String tipoUsuario){
         this.tipoUsuario = tipoUsuario;
     }
-    
+   
     
     //ALMACENAR USUARIOS POR DEFECTO
     public void almacenarUsuariosPorDefault(){
