@@ -7,11 +7,42 @@
  */
 package model;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 
 /**
  *
  * @author Juan
  */
-public class Delete {
+public class Delete extends Create{
     
+    public void eliminarUsuarioPorCedula(String cedulaInput) {
+        
+    try {
+        int cedula = Integer.parseInt(cedulaInput);
+
+        ArrayList<ArrayList<String>> usuariosAEliminar = new ArrayList<>();
+
+        for (ArrayList<String> usuario : datosUsuarios) {
+            int cedulaActual = Integer.parseInt(usuario.get(6).substring(16));
+
+            System.out.println("Cedula actual: " + cedulaActual);
+            System.out.println("Cedula proporcionada: " + cedula);
+
+            if (cedulaActual == cedula) {
+                usuariosAEliminar.add(usuario);
+            }
+        }
+
+        if (!usuariosAEliminar.isEmpty()) {
+            datosUsuarios.removeAll(usuariosAEliminar);
+            System.out.println("Usuario(s) con cédula " + cedula + " eliminado(s)");
+        } else {
+            JOptionPane.showMessageDialog(null, "No se encontró un usuario con la cédula proporcionada.");
+        }
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(null, "Por favor, ingresa una cédula válida.");
+    }
+}
 }

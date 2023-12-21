@@ -28,14 +28,12 @@ public class DeleteView extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jTextField17 = new javax.swing.JTextField();
-        botonEliminar = new javax.swing.JButton();
-        buscarId = new javax.swing.JTextField();
+        botonEliminarUsuario = new javax.swing.JButton();
+        buscarIdField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         botonVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(0, 0));
-        setPreferredSize(new java.awt.Dimension(950, 600));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(196, 196, 196));
@@ -53,29 +51,29 @@ public class DeleteView extends javax.swing.JFrame {
         jPanel1.add(jTextField17);
         jTextField17.setBounds(211, 540, 520, 19);
 
-        botonEliminar.setBackground(new java.awt.Color(131, 131, 131));
-        botonEliminar.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        botonEliminar.setForeground(new java.awt.Color(0, 0, 0));
-        botonEliminar.setText("Eliminar");
-        botonEliminar.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
-        botonEliminar.addActionListener(new java.awt.event.ActionListener() {
+        botonEliminarUsuario.setBackground(new java.awt.Color(131, 131, 131));
+        botonEliminarUsuario.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        botonEliminarUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        botonEliminarUsuario.setText("Eliminar");
+        botonEliminarUsuario.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        botonEliminarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonEliminarActionPerformed(evt);
+                botonEliminarUsuarioActionPerformed(evt);
             }
         });
-        jPanel1.add(botonEliminar);
-        botonEliminar.setBounds(410, 400, 170, 60);
+        jPanel1.add(botonEliminarUsuario);
+        botonEliminarUsuario.setBounds(410, 400, 170, 60);
 
-        buscarId.setBackground(new java.awt.Color(255, 255, 255));
-        buscarId.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        buscarId.setForeground(new java.awt.Color(0, 0, 0));
-        buscarId.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        buscarId.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        buscarId.setMaximumSize(new java.awt.Dimension(0, 0));
-        buscarId.setMinimumSize(new java.awt.Dimension(0, 0));
-        buscarId.setPreferredSize(new java.awt.Dimension(0, 0));
-        jPanel1.add(buscarId);
-        buscarId.setBounds(330, 280, 320, 65);
+        buscarIdField.setBackground(new java.awt.Color(255, 255, 255));
+        buscarIdField.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        buscarIdField.setForeground(new java.awt.Color(0, 0, 0));
+        buscarIdField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        buscarIdField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        buscarIdField.setMaximumSize(new java.awt.Dimension(0, 0));
+        buscarIdField.setMinimumSize(new java.awt.Dimension(0, 0));
+        buscarIdField.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(buscarIdField);
+        buscarIdField.setBounds(330, 280, 320, 65);
 
         jLabel5.setBackground(new java.awt.Color(196, 196, 196));
         jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -107,9 +105,9 @@ public class DeleteView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarActionPerformed
+    private void botonEliminarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonEliminarActionPerformed
+    }//GEN-LAST:event_botonEliminarUsuarioActionPerformed
 
     private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
         // TODO add your handling code here:
@@ -151,9 +149,9 @@ public class DeleteView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton botonEliminar;
+    public javax.swing.JButton botonEliminarUsuario;
     public javax.swing.JButton botonVolver;
-    public javax.swing.JTextField buscarId;
+    public javax.swing.JTextField buscarIdField;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField17;

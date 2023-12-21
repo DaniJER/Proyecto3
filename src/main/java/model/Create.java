@@ -45,13 +45,8 @@ public class Create{
     private String tipoUsuario;
     private String direccion;
     private String cedula;
-    private int contador;
-    
-    //Set<String> datosUsuarios = new HashSet<String>();
-    //Map<Integer, String> id = new HashMap <Integer, String>(); 
-    ArrayList<ArrayList<String>> datosUsuarios = new ArrayList();
-    ArrayList<String> segundoArrayList = new ArrayList<>();
-    ArrayList<String> arrayDeAlmacenar = new ArrayList<>();
+
+    ArrayList<ArrayList<String>> datosUsuarios = new ArrayList<>();
     
     public String getNombre() {
         return nombre;
@@ -119,54 +114,50 @@ public class Create{
    
     
     //ALMACENAR USUARIOS POR DEFECTO
-    public void almacenarUsuariosPorDefault(){
-        
+    public void almacenarUsuariosPorDefault() {
+        ArrayList<String> segundoArrayList = new ArrayList<>();
+
         segundoArrayList.add("Pepito");
         segundoArrayList.add("Perez");
         segundoArrayList.add("2334");
         segundoArrayList.add("Av siempre viva 712");
         segundoArrayList.add("junio 1999");
         segundoArrayList.add("1008");
-        
+
         datosUsuarios.add(segundoArrayList);
-       
     }
     //ALMACENAR USUARIOS DIGITADOS
-    public void almacenarUsuarios(){
-       
+    public void almacenarUsuarios() {
+        ArrayList<String> arrayDeAlmacenar = new ArrayList<>();
+
         arrayDeAlmacenar.add(this.nombre);
-        arrayDeAlmacenar.add(String.valueOf(this.apellido));
+        arrayDeAlmacenar.add(this.apellido);
+        arrayDeAlmacenar.add(this.tipoTel);
         arrayDeAlmacenar.add(this.celular);
         arrayDeAlmacenar.add(this.direccion);
         arrayDeAlmacenar.add(this.nacimiento);
-        arrayDeAlmacenar.add( String.valueOf(this.cedula));
-        arrayDeAlmacenar.add(this.tipoTel);
+        arrayDeAlmacenar.add(String.valueOf(this.cedula));
         arrayDeAlmacenar.add(this.tipoUsuario);
-        
-        datosUsuarios.add(arrayDeAlmacenar);
-        
-        System.out.println("Usuario agregado");
-        System.out.println(datosUsuarios);   
-        
-    }
-    //COMPROBAR CEDULAS DUPLICADAS
-    public boolean comprobarUsuarios(int cedula){
-      
-            for (ArrayList<String> usuario : datosUsuarios) {
-            // Obtener la cedula del usuario actual
-            
-            int cedulaActual = Integer.parseInt(usuario.get(5));
 
-            // Comparar con la cedula proporcionada
+        datosUsuarios.add(arrayDeAlmacenar);
+
+        System.out.println("Usuario agregado");
+        System.out.println(datosUsuarios);
+    }
+
+    // Método para comprobar cédulas duplicadas
+    public boolean comprobarUsuarios(int cedula) {
+        
+        for (ArrayList<String> usuario : datosUsuarios) {
+            int cedulaActual = Integer.parseInt(usuario.get(6).substring(16));
+
             if (cedulaActual == cedula) {
-                
-                JOptionPane.showMessageDialog(null,"La cedula que ingresaste ya corresponde a un usuario, por favor ingresa otra");
+                JOptionPane.showMessageDialog(null, "La cedula que ingresaste ya corresponde a un usuario, por favor ingresa otra");
                 return true; // Cédula duplicada encontrada
             }
         }
-            //Si no se encontro una cedula duplicada, almacenar un usuario.
-            almacenarUsuarios();
-            return false; // Cédula no duplicada
+        almacenarUsuarios();
+        return false; // Cédula no duplicada
     }
 }
   

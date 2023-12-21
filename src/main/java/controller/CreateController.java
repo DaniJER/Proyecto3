@@ -44,7 +44,7 @@ public class CreateController implements ActionListener {
         vistaCrear.setTitle("Agregar Usuarios");
         
         //Guardar un registro por defecto
-        createModel.almacenarUsuariosPorDefault();
+        //createModel.almacenarUsuariosPorDefault();
         
     }
     
@@ -66,15 +66,14 @@ public class CreateController implements ActionListener {
         }
         if(e.getSource() == vistaCrear.botonEnviar){
             
-            createModel.setNombre(vistaCrear.campoNombre.getText());
-            createModel.setApellido(vistaCrear.campoApellido.getText());
-            createModel.setDireccion(vistaCrear.campoDireccion.getText());
-            createModel.setCelular(vistaCrear.campoCelular.getText());
-            createModel.setCedula((vistaCrear.campoCedula.getText()));
-            createModel.setNacimiento(vistaCrear.campoNacimiento.getText());
+            createModel.setNombre("nombre: "+vistaCrear.campoNombre.getText());
+            createModel.setApellido("Apellido: "+vistaCrear.campoApellido.getText());
+            createModel.setDireccion("Direccion: "+vistaCrear.campoDireccion.getText());
             createModel.setTipoTel("Tipo de telefono: " +String.valueOf(vistaCrear.campoTipoTelefono.getSelectedItem()));
+            createModel.setCelular("Numero: " +vistaCrear.campoCelular.getText());
             createModel.setTipoUsuario("Tipo de usuario: " + String.valueOf(vistaCrear.campoTipoUsuario.getSelectedItem()));
-
+            createModel.setCedula(("identificacion: "+vistaCrear.campoCedula.getText()));
+            createModel.setNacimiento("Fecha Nac: "+vistaCrear.campoNacimiento.getText());
 
             createModel.comprobarUsuarios(Integer.parseInt(vistaCrear.campoCedula.getText()));
             

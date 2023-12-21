@@ -19,7 +19,7 @@ public class Read extends Create  {
     public void leerColeccion(){
         //ArrayList<String> arrayLeer = new ArrayList<>();
         //arrayLeer.add()
-       System.out.println(  datosUsuarios);
+       //System.out.println(  datosUsuarios);
     }    
 
 }

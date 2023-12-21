@@ -19,28 +19,32 @@ import model. *;
 public class DeleteController implements ActionListener{
     private PrincipalView vistaPrincipal;
     private DeleteView vistaEliminar;
+    private Delete deleteModel;
 
-    public DeleteController(PrincipalView vistaPrincipal, DeleteView vistaEliminar) {
+    public DeleteController(PrincipalView vistaPrincipal, DeleteView vistaEliminar, Delete deleteModel) {
         this.vistaPrincipal = vistaPrincipal;
         this.vistaEliminar = vistaEliminar;
+        this.deleteModel = deleteModel;
+        
+        
         vistaPrincipal.botonEliminar.addActionListener(this);
-        vistaEliminar.botonEliminar.addActionListener(this);
+        vistaEliminar.botonEliminarUsuario.addActionListener(this);
         vistaEliminar.botonVolver.addActionListener(this);
-    }
-    
-    public void iniciarVistaEliminar (){
-        vistaEliminar.setTitle("Univalle");
-        vistaEliminar.setLocationRelativeTo (null);
-        vistaEliminar.setSize(vistaPrincipal.getWidth(), vistaPrincipal.getHeight());
     }
     
     
     @Override
     public void actionPerformed(ActionEvent e) {
+        
         if(e.getSource () == vistaPrincipal.botonEliminar){
             vistaPrincipal.dispose();
             vistaEliminar.setVisible(true);
-            
+            vistaEliminar.setLocationRelativeTo(null);
+            vistaEliminar.setSize(vistaPrincipal.getWidth(), vistaPrincipal.getHeight());
+        }
+        
+        if(e.getSource() == vistaEliminar.botonEliminarUsuario){
+            deleteModel.eliminarUsuarioPorCedula(vistaEliminar.buscarIdField.getText());
         }
         
         if(e.getSource() == vistaEliminar.botonVolver){
