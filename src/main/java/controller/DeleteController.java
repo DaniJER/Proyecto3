@@ -39,8 +39,9 @@ public class DeleteController implements ActionListener{
         if(e.getSource () == vistaPrincipal.botonEliminar){
             vistaPrincipal.dispose();
             vistaEliminar.setVisible(true);
-            vistaEliminar.setLocationRelativeTo(null);
             vistaEliminar.setSize(vistaPrincipal.getWidth(), vistaPrincipal.getHeight());
+            vistaEliminar.setLocationRelativeTo(null);
+            
         }
         
         if(e.getSource() == vistaEliminar.botonEliminarUsuario){

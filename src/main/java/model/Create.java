@@ -111,8 +111,15 @@ public class Create{
     public void setTipoUsuario(String tipoUsuario){
         this.tipoUsuario = tipoUsuario;
     }
-   
     
+     public ArrayList<ArrayList<String>> getDatosUsuarios() {
+        return datosUsuarios;
+    }
+
+    public void setDatosUsuarios(ArrayList<ArrayList<String>> datosUsuarios) {
+        this.datosUsuarios = datosUsuarios;
+    }
+   
     //ALMACENAR USUARIOS POR DEFECTO
     public void almacenarUsuariosPorDefault() {
         ArrayList<String> segundoArrayList = new ArrayList<>();
@@ -141,8 +148,7 @@ public class Create{
 
         datosUsuarios.add(arrayDeAlmacenar);
 
-        System.out.println("Usuario agregado");
-        System.out.println(datosUsuarios);
+        JOptionPane.showMessageDialog(null,"El usuario ha sido agregado");
     }
 
     // Método para comprobar cédulas duplicadas

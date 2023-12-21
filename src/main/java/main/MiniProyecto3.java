@@ -27,7 +27,7 @@ public class MiniProyecto3 {
         DeleteView vistaEliminar = new DeleteView();
         ReadView vistaListar = new ReadView();
         Read leer = new Read();
-        Delete deleteModel = new Delete();
+        Delete deleteModel = new Delete(modeloCrear);
         
         
         //Instanciando el objeto de la clase Create Controller y pasandole como parametro lo mismo que estaba en su constructor
