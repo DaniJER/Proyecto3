@@ -26,7 +26,7 @@ public class MiniProyecto3 {
         SearchUserToUpdateView vistaBuscarYActualizarUsuario = new SearchUserToUpdateView();
         DeleteView vistaEliminar = new DeleteView();
         ReadView vistaListar = new ReadView();
-        Read leer = new Read();
+        Read leer = new Read(modeloCrear);
         Delete deleteModel = new Delete(modeloCrear);
         
         

@@ -14,10 +14,28 @@ import java.util.ArrayList;
  * @author Juan
  */
 
-public class Read extends Create {
+public class Read{
+    
+    private Create create;
+    private String nombreUsuario;
+    private String apellidoUsuario;
+    public Read(Create create) {
+        this.create = create;
+        
+    }
+    public String getNombreUsuario() {
+        return nombreUsuario;
+    }
 
-    public void leerColeccion(int id) {
-        ArrayList<ArrayList<String>> datos = getDatosUsuarios();
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
+    }
+    
+    
+
+    public void leerColeccion(String id) {
+     
+        ArrayList<ArrayList<String>> datos = create.getDatosUsuarios();
 
         // Imprimir la colección para depuración
         System.out.println("Contenido de la colección:");
