@@ -49,7 +49,7 @@ public class ReadController implements ActionListener {
             vistaPrincipal.setVisible(true);
         }
         if (e.getSource () == vistaListar.botonListar){
-            leer.leerColeccion();
+            leer.leerColeccion(Integer.parseInt(vistaListar.buscarId.getText()));
         }
     }
     

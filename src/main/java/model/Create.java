@@ -147,7 +147,6 @@ public class Create{
         arrayDeAlmacenar.add(this.tipoUsuario);
 
         datosUsuarios.add(arrayDeAlmacenar);
-
         JOptionPane.showMessageDialog(null,"El usuario ha sido agregado");
     }
 
@@ -163,6 +162,7 @@ public class Create{
             }
         }
         almacenarUsuarios();
+        System.out.println(datosUsuarios);
         return false; // Cédula no duplicada
     }
 }
