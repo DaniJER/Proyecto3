@@ -54,6 +54,7 @@ public class ReadController implements ActionListener {
         if (e.getSource () == vistaListar.botonListar){
             boolean validation = leer.leerColeccion(vistaListar.buscarId.getText());
             if(validation){
+                vistaListar.buscarId.setText("");
                 vistaListar.dispose();
                 show.setVisible(true);
                 show.setSize(950, 600);

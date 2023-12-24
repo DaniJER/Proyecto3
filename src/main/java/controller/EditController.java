@@ -52,6 +52,7 @@ public class EditController implements ActionListener {
         if (e.getSource() == vistaBuscarYEditarUsuario.botonBuscar){
             boolean validacion = editModel.validarUsuario(vistaBuscarYEditarUsuario.id.getText());
             if(validacion){
+                vistaBuscarYEditarUsuario.id.setText("");
                 vistaBuscarYEditarUsuario.dispose();
                 vistaEditar.setVisible(true);
                 vistaEditar.setLocationRelativeTo(null);
@@ -72,7 +73,11 @@ public class EditController implements ActionListener {
         }
         
         if(e.getSource() == vistaEditar.botonVolver){
-            //JOptionPane.showMessageDialog(null,"Se presiono boton volver");
+            vistaEditar.updateName.setText("");
+            vistaEditar.updateLastName.setText("");
+            vistaEditar.updateAdress.setText("");
+            vistaEditar.updateBirthday.setText("");
+            vistaEditar.updatePhone.setText("");
             vistaEditar.dispose();
             vistaPrincipal.setVisible(true);
             }
