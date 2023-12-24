@@ -30,17 +30,19 @@ public class SearchUserToUpdateView extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jTextField17 = new javax.swing.JTextField();
         botonBuscar = new javax.swing.JButton();
-        buscarId = new javax.swing.JTextField();
+        id = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         botonVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(196, 196, 196));
         jPanel1.setLayout(null);
 
         jTextField1.setBackground(new java.awt.Color(196, 196, 196));
         jTextField1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
         jTextField1.setText("Buscar usuario a actualizar");
         jTextField1.setBorder(null);
         jTextField1.setMaximumSize(new java.awt.Dimension(0, 0));
@@ -56,6 +58,7 @@ public class SearchUserToUpdateView extends javax.swing.JFrame {
 
         jTextField17.setBackground(new java.awt.Color(196, 196, 196));
         jTextField17.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTextField17.setForeground(new java.awt.Color(0, 0, 0));
         jTextField17.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField17.setText("Developed by jviedman dev - enriquez dev");
         jTextField17.setBorder(null);
@@ -64,6 +67,7 @@ public class SearchUserToUpdateView extends javax.swing.JFrame {
 
         botonBuscar.setBackground(new java.awt.Color(131, 131, 131));
         botonBuscar.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        botonBuscar.setForeground(new java.awt.Color(0, 0, 0));
         botonBuscar.setText("Buscar");
         botonBuscar.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
         botonBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -74,12 +78,17 @@ public class SearchUserToUpdateView extends javax.swing.JFrame {
         jPanel1.add(botonBuscar);
         botonBuscar.setBounds(370, 370, 170, 60);
 
-        buscarId.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel1.add(buscarId);
-        buscarId.setBounds(460, 240, 180, 40);
+        id.setBackground(new java.awt.Color(255, 255, 255));
+        id.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        id.setForeground(new java.awt.Color(0, 0, 0));
+        id.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        id.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel1.add(id);
+        id.setBounds(460, 240, 180, 40);
 
         jLabel5.setBackground(new java.awt.Color(196, 196, 196));
         jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("<html>Número de identificacion </html>");
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jLabel5.setMaximumSize(new java.awt.Dimension(0, 0));
@@ -99,26 +108,8 @@ public class SearchUserToUpdateView extends javax.swing.JFrame {
         jPanel1.add(botonVolver);
         botonVolver.setBounds(40, 50, 100, 90);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 950, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 950, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -176,7 +167,7 @@ public class SearchUserToUpdateView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton botonBuscar;
     public javax.swing.JButton botonVolver;
-    private javax.swing.JTextField buscarId;
+    public javax.swing.JTextField id;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;

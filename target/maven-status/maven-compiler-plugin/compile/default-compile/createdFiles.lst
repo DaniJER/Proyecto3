@@ -1,12 +1,15 @@
 view\PrincipalView$5.class
 view\DeleteView$3.class
+view\ShowUsers$1.class
 view\CreateView$1.class
 view\CreateView$7.class
 view\CreateView$4.class
 view\DeleteView$2.class
+view\ShowUsers$2.class
 view\CreateView$5.class
 view\PrincipalView$4.class
 view\PrincipalView$1.class
+view\ShowUsers.class
 controller\DeleteController.class
 view\PrincipalView.class
 view\ReadView$1.class

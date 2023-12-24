@@ -120,19 +120,6 @@ public class Create{
         this.datosUsuarios = datosUsuarios;
     }
    
-    //ALMACENAR USUARIOS POR DEFECTO
-    public void almacenarUsuariosPorDefault() {
-        ArrayList<String> segundoArrayList = new ArrayList<>();
-
-        segundoArrayList.add("Pepito");
-        segundoArrayList.add("Perez");
-        segundoArrayList.add("2334");
-        segundoArrayList.add("Av siempre viva 712");
-        segundoArrayList.add("junio 1999");
-        segundoArrayList.add("1008");
-
-        datosUsuarios.add(segundoArrayList);
-    }
     //ALMACENAR USUARIOS DIGITADOS
     public void almacenarUsuarios() {
         ArrayList<String> arrayDeAlmacenar = new ArrayList<>();
@@ -162,7 +149,6 @@ public class Create{
             }
         }
         almacenarUsuarios();
-        System.out.println(datosUsuarios);
         return false; // Cédula no duplicada
     }
 }

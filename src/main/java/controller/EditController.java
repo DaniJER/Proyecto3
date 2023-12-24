@@ -32,13 +32,7 @@ public class EditController implements ActionListener {
         vistaBuscarYEditarUsuario.botonBuscar.addActionListener(this);
         vistaBuscarYEditarUsuario.botonVolver.addActionListener(this);
     }
-    //Metodo que inicia la vista y establece los titulos y las dimensiones de las ventanas
-    public void iniciarVistaEditar(){
-        vistaEditar.setTitle("Editar Usuario");
-        vistaEditar.setLocationRelativeTo(null);
-
-    }
-    //Boton para las intrucciones del evento del boton "Crear".
+    
     @Override
     public void actionPerformed(ActionEvent e ) {
          
@@ -46,37 +40,37 @@ public class EditController implements ActionListener {
             //Cerrar la ventana principal el programa y abrir la ventana para crear un usuario
             vistaPrincipal.dispose();
             vistaBuscarYEditarUsuario.setVisible(true);
-            vistaBuscarYEditarUsuario.setTitle("Buscar usuario para editar");
             vistaBuscarYEditarUsuario.setLocationRelativeTo(null);
-            vistaBuscarYEditarUsuario.setSize(vistaPrincipal.getWidth(), vistaPrincipal.getHeight());
-            vistaEditar.setSize(vistaPrincipal.getWidth(), vistaPrincipal.getHeight());
-            vistaEditar.setLocationRelativeTo(null);
+            vistaBuscarYEditarUsuario.setSize(950,600);
         }
+        
         if(e.getSource() == vistaBuscarYEditarUsuario.botonVolver){
             vistaBuscarYEditarUsuario.dispose();
             vistaPrincipal.setVisible(true);
+        }
         
-        }
         if (e.getSource() == vistaBuscarYEditarUsuario.botonBuscar){
-    
-            JOptionPane.showMessageDialog(null,"Se presioso boton para buscar usuario a actualizar!!");
-            //Llamar a la logica del modelo para que valide si el id que se busco corresponde a un usuario guardado en la coleccion.
-    
+            boolean validacion = editModel.validarUsuario(vistaBuscarYEditarUsuario.id.getText());
+            if(validacion){
+                vistaBuscarYEditarUsuario.dispose();
+                vistaEditar.setVisible(true);
+                vistaEditar.setLocationRelativeTo(null);
+                vistaEditar.setSize(950,600);
+            }
         }
+        
         if(e.getSource() == vistaEditar.botonActualizar){
-            //Establecerle los valores a los campos de la vista crear
-            JOptionPane.showMessageDialog(null,"Boton actualizar Presionado");
-            //createModel.setNombre(vistaCrear.campoNombre.getText());
-            //createModel.setApellido(vistaCrear.campoApellido.getText());
-            //createModel.setDireccion(vistaCrear.campoApellido.getText());
-            //createModel.setCelular(Integer.parseInt(vistaCrear.campoApellido.getText()));
-            //createModel.setId(Integer.parseInt(vistaCrear.campoId.getText()));
-            //createModel.setNacimiento(vistaCrear.campoNacimiento.getText());
-            //createModel.almacenarUsuarios();
-            //createModel.setNombre(vistaCrear.tipoUsuarioComboBox.getText());
+            editModel.setNombre("nombre: "+vistaEditar.updateName.getText());
+            editModel.setApellido("Apellido: "+vistaEditar.updateLastName.getText());
+            editModel.setCelular("Numero de telefono: " +vistaEditar.updatePhone.getText());
+            editModel.setTipoTel("Tipo de telefono: "+String.valueOf(vistaEditar.updatePhoneType.getSelectedItem()));
+            editModel.setNacimiento("Fecha de nacimiento: "+vistaEditar.updateBirthday.getText());
+            editModel.setTipoUsuario("Tipo de usuario: " +String.valueOf(vistaEditar.updateUser.getSelectedItem()));
+            editModel.setDireccion("Direccion: "+vistaEditar.updateAdress.getText());
             
-                    
+            editModel.updateUser();
         }
+        
         if(e.getSource() == vistaEditar.botonVolver){
             //JOptionPane.showMessageDialog(null,"Se presiono boton volver");
             vistaEditar.dispose();

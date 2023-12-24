@@ -65,6 +65,7 @@ public class PrincipalView extends javax.swing.JFrame {
 
         botonListar.setBackground(new java.awt.Color(131, 131, 131));
         botonListar.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        botonListar.setForeground(new java.awt.Color(0, 0, 0));
         botonListar.setText("Listar");
         botonListar.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 0), java.awt.Color.black));
         botonListar.setMaximumSize(new java.awt.Dimension(170, 75));
@@ -80,6 +81,7 @@ public class PrincipalView extends javax.swing.JFrame {
 
         botonAgregar.setBackground(new java.awt.Color(131, 131, 131));
         botonAgregar.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        botonAgregar.setForeground(new java.awt.Color(0, 0, 0));
         botonAgregar.setText("Agregar");
         botonAgregar.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
         botonAgregar.setMaximumSize(new java.awt.Dimension(170, 75));
@@ -95,6 +97,7 @@ public class PrincipalView extends javax.swing.JFrame {
 
         botonActualizar.setBackground(new java.awt.Color(131, 131, 131));
         botonActualizar.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        botonActualizar.setForeground(new java.awt.Color(0, 0, 0));
         botonActualizar.setText("Actualizar");
         botonActualizar.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
         botonActualizar.setMaximumSize(new java.awt.Dimension(170, 75));
@@ -110,6 +113,7 @@ public class PrincipalView extends javax.swing.JFrame {
 
         botonEliminar.setBackground(new java.awt.Color(131, 131, 131));
         botonEliminar.setFont(new java.awt.Font("Arial", 0, 32)); // NOI18N
+        botonEliminar.setForeground(new java.awt.Color(0, 0, 0));
         botonEliminar.setText("Eliminar");
         botonEliminar.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), java.awt.Color.black));
         botonEliminar.setMaximumSize(new java.awt.Dimension(170, 75));
@@ -125,6 +129,7 @@ public class PrincipalView extends javax.swing.JFrame {
 
         jTextField3.setBackground(new java.awt.Color(196, 196, 196));
         jTextField3.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTextField3.setForeground(new java.awt.Color(0, 0, 0));
         jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField3.setText("Developed by jviedman dev - enriquez dev");
         jTextField3.setBorder(null);
@@ -132,6 +137,7 @@ public class PrincipalView extends javax.swing.JFrame {
         jTextField3.setBounds(211, 540, 520, 19);
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Bienvenido");
         jLabel3.setMaximumSize(new java.awt.Dimension(0, 0));
@@ -141,6 +147,7 @@ public class PrincipalView extends javax.swing.JFrame {
         jLabel3.setBounds(370, 140, 195, 82);
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 40)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Universidad del Valle");
         jLabel4.setMaximumSize(new java.awt.Dimension(0, 0));

@@ -28,33 +28,35 @@ public class EditView extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
-        campoTipoTelefono = new javax.swing.JComboBox<>();
+        updatePhoneType = new javax.swing.JComboBox<>();
         jTextField17 = new javax.swing.JTextField();
         botonActualizar = new javax.swing.JButton();
-        campoApellido = new javax.swing.JTextField();
-        campoId = new javax.swing.JTextField();
-        campoNombre = new javax.swing.JTextField();
-        campoCelular = new javax.swing.JTextField();
-        campoNacimiento = new javax.swing.JTextField();
-        campoDireccion = new javax.swing.JTextField();
-        campoTipoUsuario = new javax.swing.JComboBox<>();
+        updateLastName = new javax.swing.JTextField();
+        updateName = new javax.swing.JTextField();
+        updatePhone = new javax.swing.JTextField();
+        updateBirthday = new javax.swing.JTextField();
+        updateAdress = new javax.swing.JTextField();
+        updateUser = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        birthday = new javax.swing.JLabel();
+        user = new javax.swing.JLabel();
+        phoneType = new javax.swing.JLabel();
+        adress = new javax.swing.JLabel();
+        lastName = new javax.swing.JLabel();
+        name = new javax.swing.JLabel();
         botonVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(196, 196, 196));
+        jPanel1.setMaximumSize(new java.awt.Dimension(950, 600));
+        jPanel1.setMinimumSize(new java.awt.Dimension(950, 600));
+        jPanel1.setPreferredSize(new java.awt.Dimension(950, 600));
         jPanel1.setLayout(null);
 
         jTextField1.setBackground(new java.awt.Color(196, 196, 196));
         jTextField1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
         jTextField1.setText("Editar Usuario");
         jTextField1.setBorder(null);
         jTextField1.setMaximumSize(new java.awt.Dimension(0, 0));
@@ -68,22 +70,25 @@ public class EditView extends javax.swing.JFrame {
         jPanel1.add(jTextField1);
         jTextField1.setBounds(330, 50, 280, 100);
 
-        campoTipoTelefono.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        campoTipoTelefono.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fijo", "movil" }));
-        campoTipoTelefono.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
-        campoTipoTelefono.setMaximumSize(new java.awt.Dimension(0, 0));
-        campoTipoTelefono.setMinimumSize(new java.awt.Dimension(0, 0));
-        campoTipoTelefono.setPreferredSize(new java.awt.Dimension(0, 0));
-        campoTipoTelefono.addActionListener(new java.awt.event.ActionListener() {
+        updatePhoneType.setBackground(new java.awt.Color(255, 255, 255));
+        updatePhoneType.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        updatePhoneType.setForeground(new java.awt.Color(0, 0, 0));
+        updatePhoneType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fijo", "movil" }));
+        updatePhoneType.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        updatePhoneType.setMaximumSize(new java.awt.Dimension(0, 0));
+        updatePhoneType.setMinimumSize(new java.awt.Dimension(0, 0));
+        updatePhoneType.setPreferredSize(new java.awt.Dimension(0, 0));
+        updatePhoneType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoTipoTelefonoActionPerformed(evt);
+                updatePhoneTypeActionPerformed(evt);
             }
         });
-        jPanel1.add(campoTipoTelefono);
-        campoTipoTelefono.setBounds(720, 190, 175, 40);
+        jPanel1.add(updatePhoneType);
+        updatePhoneType.setBounds(720, 230, 180, 40);
 
         jTextField17.setBackground(new java.awt.Color(196, 196, 196));
         jTextField17.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTextField17.setForeground(new java.awt.Color(0, 0, 0));
         jTextField17.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField17.setText("Developed by jviedman dev - enriquez dev");
         jTextField17.setBorder(null);
@@ -92,6 +97,7 @@ public class EditView extends javax.swing.JFrame {
 
         botonActualizar.setBackground(new java.awt.Color(131, 131, 131));
         botonActualizar.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        botonActualizar.setForeground(new java.awt.Color(0, 0, 0));
         botonActualizar.setText("Actualizar");
         botonActualizar.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
         botonActualizar.addActionListener(new java.awt.event.ActionListener() {
@@ -102,148 +108,148 @@ public class EditView extends javax.swing.JFrame {
         jPanel1.add(botonActualizar);
         botonActualizar.setBounds(400, 460, 170, 60);
 
-        campoApellido.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        campoApellido.addActionListener(new java.awt.event.ActionListener() {
+        updateLastName.setBackground(new java.awt.Color(255, 255, 255));
+        updateLastName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        updateLastName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoApellidoActionPerformed(evt);
+                updateLastNameActionPerformed(evt);
             }
         });
-        jPanel1.add(campoApellido);
-        campoApellido.setBounds(280, 320, 180, 40);
+        jPanel1.add(updateLastName);
+        updateLastName.setBounds(280, 320, 180, 40);
 
-        campoId.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel1.add(campoId);
-        campoId.setBounds(720, 380, 180, 40);
-
-        campoNombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        campoNombre.addActionListener(new java.awt.event.ActionListener() {
+        updateName.setBackground(new java.awt.Color(255, 255, 255));
+        updateName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        updateName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoNombreActionPerformed(evt);
+                updateNameActionPerformed(evt);
             }
         });
-        jPanel1.add(campoNombre);
-        campoNombre.setBounds(280, 260, 180, 40);
+        jPanel1.add(updateName);
+        updateName.setBounds(280, 260, 180, 40);
 
-        campoCelular.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        campoCelular.addActionListener(new java.awt.event.ActionListener() {
+        updatePhone.setBackground(new java.awt.Color(255, 255, 255));
+        updatePhone.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        updatePhone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoCelularActionPerformed(evt);
+                updatePhoneActionPerformed(evt);
             }
         });
-        jPanel1.add(campoCelular);
-        campoCelular.setBounds(720, 260, 180, 40);
+        jPanel1.add(updatePhone);
+        updatePhone.setBounds(720, 300, 180, 40);
 
-        campoNacimiento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        campoNacimiento.addActionListener(new java.awt.event.ActionListener() {
+        updateBirthday.setBackground(new java.awt.Color(255, 255, 255));
+        updateBirthday.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        updateBirthday.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoNacimientoActionPerformed(evt);
+                updateBirthdayActionPerformed(evt);
             }
         });
-        jPanel1.add(campoNacimiento);
-        campoNacimiento.setBounds(280, 390, 180, 40);
+        jPanel1.add(updateBirthday);
+        updateBirthday.setBounds(280, 390, 180, 40);
 
-        campoDireccion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        campoDireccion.addActionListener(new java.awt.event.ActionListener() {
+        updateAdress.setBackground(new java.awt.Color(255, 255, 255));
+        updateAdress.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        updateAdress.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoDireccionActionPerformed(evt);
+                updateAdressActionPerformed(evt);
             }
         });
-        jPanel1.add(campoDireccion);
-        campoDireccion.setBounds(720, 320, 180, 40);
+        jPanel1.add(updateAdress);
+        updateAdress.setBounds(720, 360, 180, 40);
 
-        campoTipoUsuario.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        campoTipoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estudiante", "profesor", "empleado" }));
-        campoTipoUsuario.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
-        campoTipoUsuario.setMaximumSize(new java.awt.Dimension(0, 0));
-        campoTipoUsuario.setMinimumSize(new java.awt.Dimension(0, 0));
-        campoTipoUsuario.setPreferredSize(new java.awt.Dimension(0, 0));
-        campoTipoUsuario.addActionListener(new java.awt.event.ActionListener() {
+        updateUser.setBackground(new java.awt.Color(255, 255, 255));
+        updateUser.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        updateUser.setForeground(new java.awt.Color(0, 0, 0));
+        updateUser.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estudiante", "profesor", "empleado" }));
+        updateUser.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, java.awt.Color.black));
+        updateUser.setMaximumSize(new java.awt.Dimension(0, 0));
+        updateUser.setMinimumSize(new java.awt.Dimension(0, 0));
+        updateUser.setPreferredSize(new java.awt.Dimension(0, 0));
+        updateUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoTipoUsuarioActionPerformed(evt);
+                updateUserActionPerformed(evt);
             }
         });
-        jPanel1.add(campoTipoUsuario);
-        campoTipoUsuario.setBounds(280, 200, 175, 40);
+        jPanel1.add(updateUser);
+        updateUser.setBounds(280, 200, 175, 40);
 
         jLabel1.setBackground(new java.awt.Color(196, 196, 196));
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("<html>Tipo de teléfono</html>");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jLabel1.setMaximumSize(new java.awt.Dimension(0, 0));
         jLabel1.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel1.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(500, 180, 190, 60);
+        jLabel1.setBounds(500, 220, 190, 60);
 
-        jLabel2.setBackground(new java.awt.Color(196, 196, 196));
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel2.setText("<html>Fecha de nacimiento</html>");
-        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jLabel2.setMaximumSize(new java.awt.Dimension(0, 0));
-        jLabel2.setMinimumSize(new java.awt.Dimension(0, 0));
-        jLabel2.setPreferredSize(new java.awt.Dimension(0, 0));
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(40, 380, 186, 70);
+        birthday.setBackground(new java.awt.Color(196, 196, 196));
+        birthday.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        birthday.setForeground(new java.awt.Color(0, 0, 0));
+        birthday.setText("<html>Fecha de nacimiento</html>");
+        birthday.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        birthday.setMaximumSize(new java.awt.Dimension(0, 0));
+        birthday.setMinimumSize(new java.awt.Dimension(0, 0));
+        birthday.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(birthday);
+        birthday.setBounds(40, 380, 186, 70);
 
-        jLabel3.setBackground(new java.awt.Color(196, 196, 196));
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel3.setText("<html>Tipo de usuario</html>");
-        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jLabel3.setMaximumSize(new java.awt.Dimension(0, 0));
-        jLabel3.setMinimumSize(new java.awt.Dimension(0, 0));
-        jLabel3.setPreferredSize(new java.awt.Dimension(0, 0));
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(40, 190, 186, 70);
+        user.setBackground(new java.awt.Color(196, 196, 196));
+        user.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        user.setForeground(new java.awt.Color(0, 0, 0));
+        user.setText("<html>Tipo de usuario</html>");
+        user.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        user.setMaximumSize(new java.awt.Dimension(0, 0));
+        user.setMinimumSize(new java.awt.Dimension(0, 0));
+        user.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(user);
+        user.setBounds(40, 190, 186, 70);
 
-        jLabel4.setBackground(new java.awt.Color(196, 196, 196));
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel4.setText("<html>Telefono</html>");
-        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jLabel4.setMaximumSize(new java.awt.Dimension(0, 0));
-        jLabel4.setMinimumSize(new java.awt.Dimension(0, 0));
-        jLabel4.setPreferredSize(new java.awt.Dimension(0, 0));
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(500, 240, 186, 70);
+        phoneType.setBackground(new java.awt.Color(196, 196, 196));
+        phoneType.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        phoneType.setForeground(new java.awt.Color(0, 0, 0));
+        phoneType.setText("<html>Telefono</html>");
+        phoneType.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        phoneType.setMaximumSize(new java.awt.Dimension(0, 0));
+        phoneType.setMinimumSize(new java.awt.Dimension(0, 0));
+        phoneType.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(phoneType);
+        phoneType.setBounds(500, 280, 186, 70);
 
-        jLabel5.setBackground(new java.awt.Color(196, 196, 196));
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel5.setText("<html>Número de identificacion </html>");
-        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jLabel5.setMaximumSize(new java.awt.Dimension(0, 0));
-        jLabel5.setMinimumSize(new java.awt.Dimension(0, 0));
-        jLabel5.setPreferredSize(new java.awt.Dimension(0, 0));
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(500, 370, 186, 70);
+        adress.setBackground(new java.awt.Color(196, 196, 196));
+        adress.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        adress.setForeground(new java.awt.Color(0, 0, 0));
+        adress.setText("<html>Dirección</html>");
+        adress.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        adress.setMaximumSize(new java.awt.Dimension(0, 0));
+        adress.setMinimumSize(new java.awt.Dimension(0, 0));
+        adress.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(adress);
+        adress.setBounds(500, 340, 186, 70);
 
-        jLabel6.setBackground(new java.awt.Color(196, 196, 196));
-        jLabel6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel6.setText("<html>Dirección</html>");
-        jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jLabel6.setMaximumSize(new java.awt.Dimension(0, 0));
-        jLabel6.setMinimumSize(new java.awt.Dimension(0, 0));
-        jLabel6.setPreferredSize(new java.awt.Dimension(0, 0));
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(500, 300, 186, 70);
+        lastName.setBackground(new java.awt.Color(196, 196, 196));
+        lastName.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lastName.setForeground(new java.awt.Color(0, 0, 0));
+        lastName.setText("<html>Apellido</html>");
+        lastName.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        lastName.setMaximumSize(new java.awt.Dimension(0, 0));
+        lastName.setMinimumSize(new java.awt.Dimension(0, 0));
+        lastName.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(lastName);
+        lastName.setBounds(40, 310, 186, 70);
 
-        jLabel7.setBackground(new java.awt.Color(196, 196, 196));
-        jLabel7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel7.setText("<html>Apellido</html>");
-        jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jLabel7.setMaximumSize(new java.awt.Dimension(0, 0));
-        jLabel7.setMinimumSize(new java.awt.Dimension(0, 0));
-        jLabel7.setPreferredSize(new java.awt.Dimension(0, 0));
-        jPanel1.add(jLabel7);
-        jLabel7.setBounds(40, 310, 186, 70);
-
-        jLabel8.setBackground(new java.awt.Color(196, 196, 196));
-        jLabel8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel8.setText("<html>Nombre</html>");
-        jLabel8.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jLabel8.setMaximumSize(new java.awt.Dimension(0, 0));
-        jLabel8.setMinimumSize(new java.awt.Dimension(0, 0));
-        jLabel8.setPreferredSize(new java.awt.Dimension(0, 0));
-        jPanel1.add(jLabel8);
-        jLabel8.setBounds(40, 250, 186, 70);
+        name.setBackground(new java.awt.Color(196, 196, 196));
+        name.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        name.setForeground(new java.awt.Color(0, 0, 0));
+        name.setText("<html>Nombre</html>");
+        name.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        name.setMaximumSize(new java.awt.Dimension(0, 0));
+        name.setMinimumSize(new java.awt.Dimension(0, 0));
+        name.setPreferredSize(new java.awt.Dimension(0, 0));
+        jPanel1.add(name);
+        name.setBounds(40, 250, 186, 70);
 
         botonVolver.setBackground(new java.awt.Color(196, 196, 196));
         botonVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/close.png"))); // NOI18N
@@ -278,37 +284,37 @@ public class EditView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void campoTipoTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoTipoTelefonoActionPerformed
+    private void updatePhoneTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updatePhoneTypeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoTipoTelefonoActionPerformed
+    }//GEN-LAST:event_updatePhoneTypeActionPerformed
 
     private void botonActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActualizarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonActualizarActionPerformed
 
-    private void campoApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoApellidoActionPerformed
+    private void updateLastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateLastNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoApellidoActionPerformed
+    }//GEN-LAST:event_updateLastNameActionPerformed
 
-    private void campoNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNombreActionPerformed
+    private void updateNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoNombreActionPerformed
+    }//GEN-LAST:event_updateNameActionPerformed
 
-    private void campoCelularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCelularActionPerformed
+    private void updatePhoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updatePhoneActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoCelularActionPerformed
+    }//GEN-LAST:event_updatePhoneActionPerformed
 
-    private void campoNacimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNacimientoActionPerformed
+    private void updateBirthdayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBirthdayActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoNacimientoActionPerformed
+    }//GEN-LAST:event_updateBirthdayActionPerformed
 
-    private void campoDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDireccionActionPerformed
+    private void updateAdressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateAdressActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoDireccionActionPerformed
+    }//GEN-LAST:event_updateAdressActionPerformed
 
-    private void campoTipoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoTipoUsuarioActionPerformed
+    private void updateUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateUserActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoTipoUsuarioActionPerformed
+    }//GEN-LAST:event_updateUserActionPerformed
 
     private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
         // TODO add your handling code here:
@@ -354,26 +360,24 @@ public class EditView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel adress;
+    private javax.swing.JLabel birthday;
     public javax.swing.JButton botonActualizar;
     public javax.swing.JButton botonVolver;
-    public javax.swing.JTextField campoApellido;
-    public javax.swing.JTextField campoCelular;
-    public javax.swing.JTextField campoDireccion;
-    public javax.swing.JTextField campoId;
-    public javax.swing.JTextField campoNacimiento;
-    public javax.swing.JTextField campoNombre;
-    public javax.swing.JComboBox<String> campoTipoTelefono;
-    public javax.swing.JComboBox<String> campoTipoUsuario;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField17;
+    private javax.swing.JLabel lastName;
+    private javax.swing.JLabel name;
+    private javax.swing.JLabel phoneType;
+    public javax.swing.JTextField updateAdress;
+    public javax.swing.JTextField updateBirthday;
+    public javax.swing.JTextField updateLastName;
+    public javax.swing.JTextField updateName;
+    public javax.swing.JTextField updatePhone;
+    public javax.swing.JComboBox<String> updatePhoneType;
+    public javax.swing.JComboBox<String> updateUser;
+    private javax.swing.JLabel user;
     // End of variables declaration//GEN-END:variables
 }

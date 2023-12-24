@@ -21,13 +21,14 @@ public class MiniProyecto3 {
         PrincipalView ventanaPrincipal = new PrincipalView();
         CreateView ventanaCrear = new CreateView();
         Create modeloCrear = new Create();
-        Edit modeloEditar = new Edit();
+        Edit modeloEditar = new Edit(modeloCrear);
         EditView vistaEditar = new EditView();
         SearchUserToUpdateView vistaBuscarYActualizarUsuario = new SearchUserToUpdateView();
         DeleteView vistaEliminar = new DeleteView();
         ReadView vistaListar = new ReadView();
         Read leer = new Read(modeloCrear);
         Delete deleteModel = new Delete(modeloCrear);
+        ShowUsers show = new ShowUsers();
         
         
         //Instanciando el objeto de la clase Create Controller y pasandole como parametro lo mismo que estaba en su constructor
@@ -38,11 +39,10 @@ public class MiniProyecto3 {
         controladorCrear.iniciarPrograma();
         
         EditController controladorEditar = new EditController(ventanaPrincipal,modeloEditar,vistaEditar, vistaBuscarYActualizarUsuario);
-        controladorEditar.iniciarVistaEditar();
         
         DeleteController controladorEliminar = new DeleteController(ventanaPrincipal,vistaEliminar, deleteModel);
         
-        ReadController controladorListar = new ReadController(ventanaPrincipal, vistaListar, leer);
+        ReadController controladorListar = new ReadController(ventanaPrincipal, vistaListar, leer, show);
         controladorListar.iniciarVistaListar();
     }
 }

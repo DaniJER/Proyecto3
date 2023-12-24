@@ -20,15 +20,18 @@ public class ReadController implements ActionListener {
     private PrincipalView vistaPrincipal;
     private ReadView vistaListar;
     private Read leer;
+    private ShowUsers show;
     
     
-    public ReadController(PrincipalView vistaPrincipal, ReadView vistaListar, Read leer){
+    public ReadController(PrincipalView vistaPrincipal, ReadView vistaListar, Read leer, ShowUsers show){
         this.vistaPrincipal = vistaPrincipal;
         this.vistaListar = vistaListar;
         this.leer = leer;
+        this.show = show;
         vistaPrincipal.botonListar.addActionListener(this);
         vistaListar.botonListar.addActionListener(this);
         vistaListar.botonVolver.addActionListener(this);
+        show.botonMenuPrincipal.addActionListener(this);
     }
     
     public void iniciarVistaListar (){
@@ -49,7 +52,24 @@ public class ReadController implements ActionListener {
             vistaPrincipal.setVisible(true);
         }
         if (e.getSource () == vistaListar.botonListar){
-            leer.leerColeccion(vistaListar.buscarId.getText());
+            boolean validation = leer.leerColeccion(vistaListar.buscarId.getText());
+            if(validation){
+                vistaListar.dispose();
+                show.setVisible(true);
+                show.setSize(950, 600);
+                show.setLocationRelativeTo (null);
+                show.showName.setText(leer.getNombre());
+                show.showLastName.setText(leer.getApellido());
+                show.showUser.setText(leer.getTipoUsuario());
+                show.showAdress.setText(leer.getDireccion());
+                show.showBirthday.setText(leer.getNacimiento());
+                show.showPhone.setText(leer.getTipoTel());
+                show.showNumberPhone.setText(leer.getCelular());
+            }
+        }
+        if (e.getSource () == show.botonMenuPrincipal){
+            show.dispose();
+            vistaPrincipal.setVisible(true);
         }
     }
     
